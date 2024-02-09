@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #06050a;
+}
+body.active {
+  overflow: hidden;
+}
+
+.conteiner {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.choice__heading {
+  font-size: 3vw;
+  text-align: center;
+  margin: 1vw 0;
+}
+.choice__logo-list {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+  margin: 0 auto;
+}
+.choice__cross {
+  position: absolute;
+  top: 2vw;
+  right: 6vw;
+  width: 2vw;
+  height: 2vw;
+}
+.choice__cross:hover::before {
+  background-color: red;
+}
+.choice__cross:hover::after {
+  background-color: red;
+}
+.choice__cross::before {
+  top: 0;
+  right: 50%;
+  transition: 0.4s;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0.2vw;
+  height: 2vw;
+  background-color: white;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.choice__cross::after {
+  top: 0;
+  right: 50%;
+  transition: 0.4s;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0.2vw;
+  height: 2vw;
+  background-color: white;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.choice__logo-item {
+  box-sizing: content-box;
+  transition: 0.5s;
+  width: 3vw;
+  border-bottom: 0.2vw solid rgba(0, 0, 0, 0);
+  padding-bottom: 0.4vw;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.choice__logo-item.active {
+  transform: translate(0, -0.5vw);
+  border-bottom: 0.2vw solid white;
+  -webkit-transform: translate(0, -0.5vw);
+  -moz-transform: translate(0, -0.5vw);
+  -ms-transform: translate(0, -0.5vw);
+  -o-transform: translate(0, -0.5vw);
+}
+.choice__logo-item:hover {
+  transform: translate(0, -0.5vw);
+  -webkit-transform: translate(0, -0.5vw);
+  -moz-transform: translate(0, -0.5vw);
+  -ms-transform: translate(0, -0.5vw);
+  -o-transform: translate(0, -0.5vw);
+}
+.choice__slides {
+  position: relative;
+}
+.choice__slide {
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+  margin-bottom: 5vw;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.choice__slide::before {
+  position: absolute;
+  width: 110vw;
+  height: 80vh;
+  display: block;
+  content: "";
+  z-index: -2;
+  top: 0;
+  left: -10vw;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(46, 46, 46), rgba(0, 0, 0, 0));
+}
+.choice__slide.active {
+  transition: 1s;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.choice__name {
+  font-size: 2vw;
+}
+.choice__about {
+  display: flex;
+}
+.choice__title {
+  font-size: 1.5vw;
+}
+.choice__description {
+  margin: 1vw 0;
+  font-size: 1.8vh;
+}
+.choice__example {
+  display: flex;
+  margin-left: 4vw;
+}
+.choice__image {
+  width: 40vw;
+  margin-left: 1vw;
+}
+.choice__image img {
+  border-radius: 0.4vw;
+  -webkit-border-radius: 0.4vw;
+  -moz-border-radius: 0.4vw;
+  -ms-border-radius: 0.4vw;
+  -o-border-radius: 0.4vw;
+}
+.choice__image:first-child {
+  margin-left: 0;
+}
+.choice__signature {
+  text-align: center;
+  margin: 1vw 0;
+}
+.choice__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 3vw;
+  backdrop-filter: blur(2px);
+}
+.choice__button {
+  display: inline-block;
+  color: white;
+  padding: 1vw;
+  font-size: 1vw;
+  border: 0.25vw solid white;
+  border-radius: 1.3vw;
+  background-color: #06050a;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.choice__button:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  box-shadow: 0 0 1vw white;
+}
+
+#css .choice__image {
+  width: 20vw;
+}
+
+.choice__image img {
+  width: 100%;
+}
+
+#python::before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #050038, rgba(0, 0, 0, 0));
+}
+
+#html::before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #2a0808, rgba(0, 0, 0, 0));
+}
+
+#js::before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #2c2c0f, rgba(0, 0, 0, 0));
+}
+
+#css::before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #031b34, rgba(0, 0, 0, 0));
+}
+
+#c::before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #060435, rgba(0, 0, 0, 0));
+}
+
+#ch::before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #1a062e, rgba(0, 0, 0, 0));
+}
+
+#cpp::before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #080539, rgba(0, 0, 0, 0));
+}
+
+#java::before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #2a1603, rgba(0, 0, 0, 0));
+}

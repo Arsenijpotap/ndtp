@@ -1,0 +1,17 @@
+@import "fonts", "reset", "vars";
+html {
+	overflow-x: hidden;
+}
+body {
+	font-family: "Poppins", sans-serif;
+	color: $light;
+
+	background-color: $background;
+	&.active {
+		overflow: hidden;
+	}
+}
+.conteiner {
+	width: 90vw;
+	margin: 0 auto;
+}

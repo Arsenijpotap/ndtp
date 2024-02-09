@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #06050a;
+}
+body.active {
+  overflow: hidden;
+}
+
+.conteiner {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+body,
+html {
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  margin: 1vw 0 0 0;
+  left: 50%;
+  padding: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.header__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  align-items: center;
+  display: flex;
+  column-gap: 10px;
+}
+.header__icon {
+  width: 5vw;
+  height: 5vw;
+  object-fit: cover;
+}
+.header__name {
+  color: white;
+  font-size: 2.5vw;
+}
+.header__opener-text {
+  font-size: 2vw;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header__settings-icon {
+  transition: rotate 1s ease, opacity 0.2s;
+  width: 3vw;
+  height: 3vw;
+  z-index: 20;
+  -webkit-transition: rotate 1s ease, opacity 0.2s;
+  -moz-transition: rotate 1s ease, opacity 0.2s;
+  -ms-transition: rotate 1s ease, opacity 0.2s;
+  -o-transition: rotate 1s ease, opacity 0.2s;
+  position: relative;
+}
+.header__settings-icon:hover {
+  rotate: 180deg;
+}
+.header__settings-icon.active {
+  transition: rotate 0s ease, opacity 0.2s;
+  content: url("/assets/icons/training/header/cross.png");
+  -webkit-transition: rotate 0s ease, opacity 0.2s;
+  -moz-transition: rotate 0s ease, opacity 0.2s;
+  -ms-transition: rotate 0s ease, opacity 0.2s;
+  -o-transition: rotate 0s ease, opacity 0.2s;
+}
+.header__settings-icon.active:hover {
+  rotate: 0deg;
+}
+.header__settings {
+  padding-top: 7vw;
+  padding-left: 3vw;
+  right: -36vw;
+  position: absolute;
+  top: -10vh;
+  width: 30vw;
+  height: 110vh;
+  background-color: #171717;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+}
+.header__settings.active {
+  transform: translate(-30vw, 0);
+  -webkit-transform: translate(-30vw, 0);
+  -moz-transform: translate(-30vw, 0);
+  -ms-transform: translate(-30vw, 0);
+  -o-transform: translate(-30vw, 0);
+}
+.header__setting-name {
+  font-size: 2vw;
+}
+.header__mode-buttons {
+  display: flex;
+}
+.header__mode-button {
+  display: block;
+  margin-top: 2vw;
+  transition: 0.5s;
+  background-color: rgb(80, 80, 80);
+  font-size: 1.5vw;
+  padding: 1vw;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.header__mode-button:first-child {
+  border-radius: 2vw 0 0 2vw;
+  -webkit-border-radius: 2vw 0 0 2vw;
+  -moz-border-radius: 2vw 0 0 2vw;
+  -ms-border-radius: 2vw 0 0 2vw;
+  -o-border-radius: 2vw 0 0 2vw;
+}
+.header__mode-button:last-child {
+  border-radius: 0 2vw 2vw 0;
+  -webkit-border-radius: 0 2vw 2vw 0;
+  -moz-border-radius: 0 2vw 2vw 0;
+  -ms-border-radius: 0 2vw 2vw 0;
+  -o-border-radius: 0 2vw 2vw 0;
+}
+
+#easy.active {
+  background-color: rgb(0, 94, 0);
+}
+
+#medium.active {
+  background-color: rgb(147, 147, 0);
+}
+
+#hard.active {
+  background-color: rgb(112, 1, 1);
+}
+
+#easy:hover {
+  background-color: rgb(0, 94, 0);
+}
+
+#medium:hover {
+  background-color: rgb(147, 147, 0);
+}
+
+#hard:hover {
+  background-color: rgb(112, 1, 1);
+}
+
+.keyboard {
+  perspective: 50vw;
+  margin: 0 auto;
+  padding-top: 7vw;
+}
+.keyboard_points {
+  perspective: 50vw;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+.keyboard__back-plate {
+  border-radius: 1vw;
+  transform: rotateX(10deg);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60vw;
+  height: 19.5vw;
+  background-color: #101010;
+  row-gap: 1vw;
+  -webkit-transform: rotateX(10deg);
+  -moz-transform: rotateX(10deg);
+  -ms-transform: rotateX(10deg);
+  -o-transform: rotateX(10deg);
+  -webkit-border-radius: 1vw;
+  -moz-border-radius: 1vw;
+  -ms-border-radius: 1vw;
+  -o-border-radius: 1vw;
+  border: solid 0.1vw #1f1f1f;
+}
+.keyboard__row {
+  translate: -0.5% -5%;
+  width: 101%;
+  display: flex;
+  column-gap: 0.7vw;
+}
+.keyboard__value {
+  transition: 0.2s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.keyboard__key_size-one {
+  transition: font-size, color, border, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7vw;
+  width: 3vw;
+  height: 3vw;
+  background-color: #101010;
+  border: solid 0.15vw #1f1f1f;
+  -webkit-border-radius: 0.7vw;
+  -moz-border-radius: 0.7vw;
+  -ms-border-radius: 0.7vw;
+  -o-border-radius: 0.7vw;
+  box-shadow: 0 0 0.6vw #1f1f1f;
+  font-size: 1.1vw;
+  -webkit-transition: font-size, color, border, box-shadow 0.2s;
+  -moz-transition: font-size, color, border, box-shadow 0.2s;
+  -ms-transition: font-size, color, border, box-shadow 0.2s;
+  -o-transition: font-size, color, border, box-shadow 0.2s;
+}
+.keyboard__key_size-one.active {
+  box-shadow: 0 0 1vw green;
+  border: solid 0.15vw green;
+  color: green;
+  font-size: 1.2vw;
+}
+.keyboard__key_size-auto {
+  transition: font-size, color, border, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7vw;
+  -webkit-border-radius: 0.7vw;
+  -moz-border-radius: 0.7vw;
+  -ms-border-radius: 0.7vw;
+  -o-border-radius: 0.7vw;
+  flex: 1;
+  height: 3vw;
+  background-color: #101010;
+  border: solid 0.15vw #1f1f1f;
+  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-transition: font-size, color, border, box-shadow 0.2s;
+  -moz-transition: font-size, color, border, box-shadow 0.2s;
+  -ms-transition: font-size, color, border, box-shadow 0.2s;
+  -o-transition: font-size, color, border, box-shadow 0.2s;
+}
+.keyboard__key_size-auto.active {
+  box-shadow: 0 0 1vw green;
+  border: solid 0.15vw green;
+  color: green;
+  font-size: 1.2vw;
+}
+.keyboard.points .keyboard__key_size-one {
+  padding: 1vw;
+}
+.keyboard.points .keyboard__key_size-auto {
+  padding: 1vw;
+}
+.keyboard.points .keyboard__value {
+  width: 100%;
+  height: 100%;
+  border-radius: 1vw;
+  background-color: rgba(245, 245, 245, 0.863);
+  -webkit-border-radius: 1vw;
+  -moz-border-radius: 1vw;
+  -ms-border-radius: 1vw;
+  -o-border-radius: 1vw;
+  font-size: 0;
+}
+.keyboard.empty .keyboard__value {
+  display: none;
+}
+.keyboard.empty .keyboard__key_size-auto.active {
+  border: solid 0.15vw #1f1f1f;
+  box-shadow: 0 0 0.6vw #1f1f1f;
+}
+.keyboard.empty .keyboard__key_size-one.active {
+  border: solid 0.15vw #1f1f1f;
+  box-shadow: 0 0 0.6vw #1f1f1f;
+}
+
+.keyboard.points #esc .keyboard__value {
+  background-color: orange;
+}
+
+.keyboard.points #tab .keyboard__value {
+  background-color: gray;
+}
+
+.keyboard.points #caps .keyboard__value {
+  background-color: grey;
+}
+
+.keyboard.points #caps.works .keyboard__value::after {
+  display: none;
+}
+
+.keyboard.points #caps.works .keyboard__value {
+  background-color: rgb(255, 0, 0);
+}
+
+.keyboard.points #shift-l .keyboard__value {
+  background-color: yellow;
+}
+
+.keyboard.points #ctrl-l .keyboard__value {
+  background-color: red;
+}
+
+.keyboard.points #fn .keyboard__value {
+  background-color: orangered;
+}
+
+.keyboard.points #win .keyboard__value {
+  background-color: purple;
+}
+
+.keyboard.points #alt-l .keyboard__value {
+  background-color: dodgerblue;
+}
+
+.keyboard.points #spase .keyboard__value {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.keyboard.points #alt-r .keyboard__value {
+  background-color: dodgerblue;
+}
+
+.keyboard.points #ctrl-r .keyboard__value {
+  background-color: purple;
+}
+
+.keyboard.points #shift-r .keyboard__value {
+  background-color: yellow;
+}
+
+.keyboard.points #enter .keyboard__value {
+  background-color: #99ff00;
+}
+
+.keyboard.points #sl-ob .keyboard__value {
+  background-color: gray;
+}
+
+.keyboard.points #bcsp .keyboard__value {
+  background-color: gray;
+}
+
+.keyboard.points #home .keyboard__value {
+  background-color: red;
+}
+
+.keyboard.points #end .keyboard__value {
+  background-color: yellow;
+}
+
+.keyboard.points #pgup .keyboard__value {
+  background-color: #99ff00;
+}
+
+.keyboard.points #pgdn .keyboard__value {
+  background-color: dodgerblue;
+}
+
+#win {
+  line-height: 0.8vw;
+}
+
+#esc,
+#caps,
+#ctrl-l,
+#ctrl-r,
+#alt-l,
+#alt-r,
+#fn,
+#home,
+#end,
+#pgdn,
+#pgup {
+  font-size: 0.7vw;
+}
+
+.keyboard #caps .keyboard__value {
+  position: relative;
+}
+
+.keyboard #caps.works .keyboard__value::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  width: 0.3vw;
+  height: 0.3vw;
+  right: -1vw;
+  top: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.textfiield {
+  padding-top: 15vw;
+  position: relative;
+}
+.textfiield__text {
+  position: relative;
+  left: 45%;
+  font-size: 2.5vw;
+}
+.textfiield__text::first-letter {
+  color: red;
+}
