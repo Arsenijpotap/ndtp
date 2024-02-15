@@ -1,0 +1,14 @@
+@import "basic";
+
+.textfiield {
+	padding-top: 15vw;
+	position: relative;
+	&__text {
+		position: relative;
+		left: 45%;
+		font-size: 2.5vw;
+		&::first-letter {
+			color: red;
+		}
+	}
+}

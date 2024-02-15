@@ -48,10 +48,13 @@ function showSlide(name) {
 	});
 	Array.from(slides).forEach((slide) => {
 		slide.classList.remove("active");
+		slide.style = "opacity:0;";
 	});
-	setTimeout(() => {
-		document.getElementById(name).classList.add("active");
-	}, 400);
+	document.getElementById(name).classList.add("active");
+	Array.from(slides).forEach((slide) => {
+		slide.style = "opacity:0;";
+	});
+	document.getElementById(name).style = "opacity:1;";
 }
 
 function nextSlide() {

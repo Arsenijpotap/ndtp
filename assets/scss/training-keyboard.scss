@@ -1,0 +1,261 @@
+@import "basic";
+
+.keyboard {
+	perspective: 50vw;
+	margin: 0 auto;
+	padding-top: 7vw;
+	&_points {
+		perspective: 50vw;
+		margin: 0 auto;
+		padding-top: 200px;
+	}
+	&__back-plate {
+		border-radius: 1vw;
+		transform: rotateX(10deg);
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		width: 60vw;
+		height: 19.5vw;
+		background-color: $keyboard;
+		row-gap: 1vw;
+		-webkit-transform: rotateX(10deg);
+		-moz-transform: rotateX(10deg);
+		-ms-transform: rotateX(10deg);
+		-o-transform: rotateX(10deg);
+		-webkit-border-radius: 1vw;
+		-moz-border-radius: 1vw;
+		-ms-border-radius: 1vw;
+		-o-border-radius: 1vw;
+		border: solid 0.1vw $keyboard-border;
+	}
+
+	&__row {
+		translate: -0.5% -5%;
+		width: 101%;
+
+		display: flex;
+		column-gap: 0.7vw;
+	}
+	&__value {
+		transition: 0.2s;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		font-size: inherit;
+		-webkit-transition: 0.2s;
+		-moz-transition: 0.2s;
+		-ms-transition: 0.2s;
+		-o-transition: 0.2s;
+	}
+	&__key {
+		&_size-one {
+			&.active {
+				box-shadow: 0 0 1vw $active;
+				border: solid 0.15vw $active;
+				color: $active;
+				font-size: 1.2vw;
+			}
+			transition: font-size, color, border, box-shadow 0.2s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 0.7vw;
+			width: 3vw;
+			height: 3vw;
+			background-color: $keyboard;
+			border: solid 0.15vw $keyboard-border;
+			-webkit-border-radius: 0.7vw;
+			-moz-border-radius: 0.7vw;
+			-ms-border-radius: 0.7vw;
+			-o-border-radius: 0.7vw;
+			box-shadow: 0 0 0.6vw $keyboard-border;
+			font-size: 1.1vw;
+			-webkit-transition: font-size, color, border, box-shadow 0.2s;
+			-moz-transition: font-size, color, border, box-shadow 0.2s;
+			-ms-transition: font-size, color, border, box-shadow 0.2s;
+			-o-transition: font-size, color, border, box-shadow 0.2s;
+		}
+
+		&_size-auto {
+			&.active {
+				box-shadow: 0 0 1vw $active;
+				border: solid 0.15vw $active;
+				color: $active;
+				font-size: 1.2vw;
+			}
+			transition: font-size, color, border, box-shadow 0.2s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 0.7vw;
+			-webkit-border-radius: 0.7vw;
+			-moz-border-radius: 0.7vw;
+			-ms-border-radius: 0.7vw;
+			-o-border-radius: 0.7vw;
+			flex: 1;
+			height: 3vw;
+			background-color: $keyboard;
+			border: solid 0.15vw $keyboard-border;
+			box-shadow: 0 0 0.6vw $keyboard-border;
+			-webkit-transition: font-size, color, border, box-shadow 0.2s;
+			-moz-transition: font-size, color, border, box-shadow 0.2s;
+			-ms-transition: font-size, color, border, box-shadow 0.2s;
+			-o-transition: font-size, color, border, box-shadow 0.2s;
+		}
+	}
+	//* keyboard points
+	//
+	//
+	//
+	//
+	//
+	//
+	&.points .keyboard__key_size-one.active .keyboard__value {
+		background-color: $active !important;
+	}
+	&.points .keyboard__key_size-auto.active .keyboard__value {
+		background-color: $active !important;
+	}
+	&.points .keyboard__key_size-one {
+		padding: 1vw;
+	}
+
+	&.points .keyboard__key_size-auto {
+		padding: 1vw;
+	}
+	&.points .keyboard__value {
+		width: 100%;
+		height: 100%;
+		border-radius: 1vw;
+		background-color: rgba(245, 245, 245, 0.863);
+		-webkit-border-radius: 1vw;
+		-moz-border-radius: 1vw;
+		-ms-border-radius: 1vw;
+		-o-border-radius: 1vw;
+		font-size: 0;
+	}
+	//* keyboard empty
+	//
+	//
+	//
+	//
+	//
+	//
+	&.empty .keyboard__value {
+		display: none;
+	}
+
+	&.empty .keyboard__key_size-auto.active {
+		border: solid 0.15vw $keyboard-border;
+		box-shadow: 0 0 0.6vw $keyboard-border;
+	}
+	&.empty .keyboard__key_size-one.active {
+		border: solid 0.15vw $keyboard-border;
+		box-shadow: 0 0 0.6vw $keyboard-border;
+	}
+}
+.keyboard.points #esc .keyboard__value {
+	background-color: orange;
+}
+.keyboard.points #tab .keyboard__value {
+	background-color: gray;
+}
+
+.keyboard.points #caps .keyboard__value {
+	background-color: grey;
+}
+.keyboard.points #caps.works .keyboard__value::after {
+	display: none;
+}
+.keyboard.points #caps.works .keyboard__value {
+	background-color: rgb(255, 0, 0);
+}
+.keyboard.points #shift-l .keyboard__value {
+	background-color: yellow;
+}
+.keyboard.points #ctrl-l .keyboard__value {
+	background-color: red;
+}
+
+.keyboard.points #fn .keyboard__value {
+	background-color: orangered;
+}
+
+.keyboard.points #win .keyboard__value {
+	background-color: purple;
+}
+
+.keyboard.points #alt-l .keyboard__value {
+	background-color: dodgerblue;
+}
+.keyboard.points #spase .keyboard__value {
+	background-color: #00000000;
+}
+.keyboard.points #alt-r .keyboard__value {
+	background-color: dodgerblue;
+}
+.keyboard.points #ctrl-r .keyboard__value {
+	background-color: purple;
+}
+.keyboard.points #shift-r .keyboard__value {
+	background-color: yellow;
+}
+.keyboard.points #enter .keyboard__value {
+	background-color: #99ff00;
+}
+.keyboard.points #sl-ob .keyboard__value {
+	background-color: gray;
+}
+.keyboard.points #bcsp .keyboard__value {
+	background-color: gray;
+}
+.keyboard.points #home .keyboard__value {
+	background-color: red;
+}
+.keyboard.points #end .keyboard__value {
+	background-color: yellow;
+}
+.keyboard.points #pgup .keyboard__value {
+	background-color: #99ff00;
+}
+.keyboard.points #pgdn .keyboard__value {
+	background-color: dodgerblue;
+}
+#win {
+	line-height: 0.8vw;
+}
+#esc,
+#caps,
+#ctrl-l,
+#ctrl-r,
+#alt-l,
+#alt-r,
+#fn,
+#home,
+#end,
+#pgdn,
+#pgup {
+	font-size: 0.7vw;
+}
+.keyboard #caps .keyboard__value {
+	position: relative;
+}
+.keyboard #caps.works .keyboard__value::after {
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	display: block;
+	background-color: #fff;
+	width: 0.3vw;
+	height: 0.3vw;
+	right: -1vw;
+	top: 0;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}

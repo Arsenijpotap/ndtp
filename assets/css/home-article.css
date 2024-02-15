@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #06050a;
+}
+body.active {
+  overflow: hidden;
+}
+
+.conteiner {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.selection {
+  position: relative;
+  padding: 10vw 0;
+}
+.selection::before {
+  z-index: -1;
+  position: absolute;
+  top: 10%;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 80%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(5, 31, 52), rgba(0, 0, 0, 0));
+}
+
+.title {
+  margin-bottom: 1vw;
+  font-size: 2vw;
+}
+
+.description {
+  font-size: 1.2vw;
+  margin-bottom: 2vw;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  padding: 1vw;
+  font-size: 2vw;
+  border: 0.25vw solid white;
+  border-radius: 1.3vw;
+  background-color: #06050a;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.button:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  box-shadow: 0 0 1vw white;
+}
