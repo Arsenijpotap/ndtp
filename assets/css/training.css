@@ -399,9 +399,15 @@ body.active {
   position: relative;
   left: 45%;
   font-size: 2.5vw;
+  white-space: nowrap;
 }
 .textfiield__text::first-letter {
   color: red;
+}
+.textfiield__description {
+  position: relative;
+  left: 33%;
+  font-size: 2.5vw;
 }
 
 * {
@@ -603,6 +609,12 @@ body.active {
   color: green;
   font-size: 1.2vw;
 }
+.keyboard__key_size-one.hint {
+  box-shadow: 0 0 1vw red;
+  border: solid 0.15vw red;
+  color: red;
+  font-size: 1.2vw;
+}
 .keyboard__key_size-auto {
   transition: font-size, color, border, box-shadow 0.2s;
   display: flex;
@@ -629,11 +641,23 @@ body.active {
   color: green;
   font-size: 1.2vw;
 }
+.keyboard__key_size-auto.hint {
+  box-shadow: 0 0 1vw red;
+  border: solid 0.15vw red;
+  color: red;
+  font-size: 1.2vw;
+}
 .keyboard.points .keyboard__key_size-one.active .keyboard__value {
   background-color: green !important;
 }
 .keyboard.points .keyboard__key_size-auto.active .keyboard__value {
   background-color: green !important;
+}
+.keyboard.points .keyboard__key_size-one.hint .keyboard__value {
+  background-color: red !important;
+}
+.keyboard.points .keyboard__key_size-auto.hint .keyboard__value {
+  background-color: red !important;
 }
 .keyboard.points .keyboard__key_size-one {
   padding: 1vw;
@@ -660,6 +684,14 @@ body.active {
   box-shadow: 0 0 0.6vw #1f1f1f;
 }
 .keyboard.empty .keyboard__key_size-one.active {
+  border: solid 0.15vw #1f1f1f;
+  box-shadow: 0 0 0.6vw #1f1f1f;
+}
+.keyboard.empty .keyboard__key_size-auto.hint {
+  border: solid 0.15vw #1f1f1f;
+  box-shadow: 0 0 0.6vw #1f1f1f;
+}
+.keyboard.empty .keyboard__key_size-one.hint {
   border: solid 0.15vw #1f1f1f;
   box-shadow: 0 0 0.6vw #1f1f1f;
 }

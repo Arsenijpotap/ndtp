@@ -78,14 +78,12 @@ function shiftUp(event) {
 			"font-size:" + window.getComputedStyle(keysSizeOne[13]).fontSize;
 		+";";
 		for (let i = 0; i < keysSizeOne.length; i++) {
-			console.log(keysSizeOne[i].textContent);
 			if (keysSizeOne[i].getAttribute("data-value")) {
 				keysSizeOne[i].children[0].textContent =
 					keysSizeOne[i].getAttribute("data-sign");
 			}
 		}
 		for (let i = 0; i < keysSizeAuto.length; i++) {
-			console.log(keysSizeAuto[i].textContent);
 			if (keysSizeAuto[i].getAttribute("data-value")) {
 				keysSizeAuto[i].children[0].textContent =
 					keysSizeAuto[i].getAttribute("data-sign");

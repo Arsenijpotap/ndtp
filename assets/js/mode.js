@@ -18,6 +18,7 @@ buttons.forEach((element) => {
 		setTimeout(() => {
 			switch (element.id) {
 				case "medium":
+					isHintsOn = false;
 					keyboardSection.classList.remove("empty");
 					keyboardSection.classList.add("points");
 					break;

@@ -129,7 +129,13 @@ body.active {
   position: relative;
   left: 45%;
   font-size: 2.5vw;
+  white-space: nowrap;
 }
 .textfiield__text::first-letter {
   color: red;
+}
+.textfiield__description {
+  position: relative;
+  left: 33%;
+  font-size: 2.5vw;
 }

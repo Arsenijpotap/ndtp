@@ -7,8 +7,15 @@
 		position: relative;
 		left: 45%;
 		font-size: 2.5vw;
+		white-space: nowrap;
 		&::first-letter {
 			color: red;
 		}
+	}
+
+	&__description {
+		position: relative;
+		left: 33%;
+		font-size: 2.5vw;
 	}
 }

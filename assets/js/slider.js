@@ -55,6 +55,7 @@ function showSlide(name) {
 		slide.style = "opacity:0;";
 	});
 	document.getElementById(name).style = "opacity:1;";
+	localStorage.setItem("setlanguage", name);
 }
 
 function nextSlide() {
