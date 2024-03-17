@@ -108,6 +108,7 @@ legend {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -391,6 +392,7 @@ legend {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -414,6 +416,8 @@ body.active {
   width: 100vw;
   height: 100vh;
   position: relative;
+  /* The typing effect */
+  /* The typewriter cursor effect */
 }
 .preview::after {
   content: "";
@@ -432,6 +436,40 @@ body.active {
   font-size: clamp(50px, 7vw, 100px);
   text-shadow: 2px 3px 4px red;
   font-weight: 600;
+}
+.preview__heading-item {
+  display: inherit;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+}
+.preview__heading-item.animation {
+  border-right: 0.15em solid #099ac7;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+.preview__heading-item:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.preview__heading-item:nth-child(3) {
+  animation-delay: 2.8s;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #099ac7;
+  }
 }
 .preview__button {
   position: relative;
@@ -684,6 +722,7 @@ legend {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -716,13 +755,34 @@ body.active {
 }
 
 .title {
+  opacity: 0;
   margin-bottom: 1vw;
   font-size: 2vw;
 }
 
+.title.animate__animated {
+  opacity: 1;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
 .description {
+  opacity: 0;
   font-size: 1.2vw;
   margin-bottom: 2vw;
+}
+
+.description.animate__animated {
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition-delay: 0.5s;
+  opacity: 1;
 }
 
 .button {
@@ -854,6 +914,7 @@ legend {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -877,6 +938,7 @@ body.active {
   position: relative;
 }
 .chapter__language {
+  opacity: 0;
   transition: 0.4s;
   position: absolute;
   border-radius: 30%;
@@ -905,17 +967,21 @@ body.active {
 .chapter__language::before {
   z-index: -1;
   position: absolute;
+  bottom: 2px;
   left: 50%;
   transform: translate(-50%, 110%);
   content: "";
   display: block;
-  height: 3.5vw;
+  height: 1.1vw;
   width: 0.5vw;
   background-color: #a06535;
   -webkit-transform: translate(-50%, 110%);
   -moz-transform: translate(-50%, 110%);
   -ms-transform: translate(-50%, 110%);
   -o-transform: translate(-50%, 110%);
+}
+.chapter__language.active {
+  opacity: 1;
 }
 .chapter__timeline {
   display: flex;
@@ -924,6 +990,7 @@ body.active {
   align-items: center;
 }
 .chapter__timeline-item {
+  transition: 0.5s;
   position: relative;
   margin-left: 2vw;
   padding: 0.8vw 1vw;
@@ -931,10 +998,15 @@ body.active {
   text-align: center;
   border-radius: 40px;
   background-color: #a06535;
+  color: #a06535;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .chapter__timeline-item::before {
   z-index: -1;
@@ -961,6 +1033,9 @@ body.active {
 .chapter__timeline-item:first-child::before {
   display: none;
 }
+.chapter__timeline-item.active {
+  color: white;
+}
 
 #python {
   padding: 1.5vw;
@@ -969,6 +1044,7 @@ body.active {
   left: 25.2vw;
 }
 #python::before {
+  top: 2px;
   transform: translate(-50%, 110%);
   -webkit-transform: translate(-50%, -110%);
   -moz-transform: translate(-50%, -110%);
@@ -988,6 +1064,7 @@ body.active {
   background-color: #669ad3;
 }
 #cpp::before {
+  top: 2px;
   transform: translate(-50%, 110%);
   -webkit-transform: translate(-50%, -110%);
   -moz-transform: translate(-50%, -110%);
@@ -1025,6 +1102,7 @@ body.active {
   left: 40.5vw;
 }
 #css::before {
+  top: 2px;
   transform: translate(-50%, 110%);
   -webkit-transform: translate(-50%, -110%);
   -moz-transform: translate(-50%, -110%);

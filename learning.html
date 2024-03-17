@@ -4,8 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="assets/css/training.css">
+        <link rel="stylesheet" href="assets/css/learning.css">
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     </head>
+
     <body>
         <header class="header">
             <div class="conteiner">
@@ -15,68 +20,20 @@
                             src="./assets/icons/logo/logo.png"
                             alt="logo FastFingers"
                             class="header__icon">
-                        <p class="header__name"></p>
+                        <p class="header__name">
+
+                        </p>
                     </a>
-                    <img alt src="assets/icons/training/header/settings.png"
-                        class="header__settings-icon">
-
-                    <div
-                        class="header__settings">
-                        <p class="header__setting-name">Параметры</p>
-                        <div class="header__mode-buttons">
-                            <button class="header__mode-button active"
-                                id="easy">режим
-                                1</button>
-                            <button class="header__mode-button"
-                                id="medium">режим 2</button>
-                            <button class="header__mode-button" id="hard">режим
-                                3</button></div>
-
-                    </div>
                 </div>
-            </div>
-        </header>
-
-        <main class="main"><div class="conteiner">
-<div class="modal">
-                        <canvas id="modalchart" class="modal__chart"></canvas>
-                        <div class="modal__content">
-                            <!-- <p class="modal__title">Информация:</p>  -->
-                            <div class="modal__info">
-                                <pre class="modal__results"></pre>
-                                <pre class="modal__results"></pre></div>
-                            <button class="modal__link">Дополнительно</button>
-                            <button class="modal__button">Понятно</button>
-                            <div class="modal__more-info">
-                            <p class="modal__results">Режим</p>
-                            <button class="modal__checkbox">йцуйуц</button>
-                            <button class="modal__checkbox">112123</button></div>
-                        </div>
-                    </div>
-                <section
-                    class="textfiield">
-                    
-
-                    <p class="textfiield__description"
-                        id="description">Нажмите Enter чтобы начать</p>
-
-                    <p class="textfiield__text">
-                        <span class="textfiield__text-active"
-                            id="textfiield-active">
-                        </span>
-                        <span class="textfiield__text-normal"
-                            id="textfiield">
-                        </span>
-                    </p>
-                </section>
-
+            </header>
+            <main>
                 <section class="keyboard" id="keyboard">
 
                     <div class="keyboard__back-plate">
                         <div class="keyboard__row">
                             <div class="keyboard__key_size-one" id="esc"
                                 data-sign="esc"
-                                data-value="~"><p
+                                data-value><p
                                     class="keyboard__value">Esc</p></div>
                             <div class="keyboard__key_size-one" id="1"
                                 data-sign="1"
@@ -200,8 +157,7 @@
                             <div class="keyboard__key_size-auto "
                                 id="caps"
                                 data-sign="Caps Lock">
-                                <p class="keyboard__value">Caps
-                                    Lock</p></div>
+                                <p class="keyboard__value">Caps Lock</p></div>
                             <div class="keyboard__key_size-one" id="a"
                                 data-sign="a"
                                 data-value="A"><p
@@ -256,8 +212,7 @@
 
                         </div>
                         <div class="keyboard__row">
-                            <div class="keyboard__key_size-auto"
-                                id="shift-l"
+                            <div class="keyboard__key_size-auto" id="shift-l"
                                 data-sign="⇪">
                                 <p class="keyboard__value">⇪</p></div>
                             <div class="keyboard__key_size-one" id="z"
@@ -300,8 +255,7 @@
                                 data-sign="/"
                                 data-value="?"><p
                                     class="keyboard__value">/</p></div>
-                            <div class="keyboard__key_size-auto"
-                                id="shift-r"
+                            <div class="keyboard__key_size-auto" id="shift-r"
                                 data-sign="⇪"><p
                                     class="keyboard__value">⇪</p></div>
                             <div class="keyboard__key_size-one" id="ArrowUp"
@@ -319,8 +273,7 @@
                             <div class="keyboard__key_size-one" id="fn"
                                 data-sign><p
                                     class="keyboard__value">Fn</p></div>
-                            <div class="keyboard__key_size-one"
-                                id="win"><div
+                            <div class="keyboard__key_size-one" id="win"><div
                                     class="keyboard__value">∎∎<br>∎∎</div></div>
                             <div class="keyboard__key_size-one" id="alt-l"
                                 data-sign="Alt"><p
@@ -334,16 +287,13 @@
                             <div class="keyboard__key_size-one" id="ctrl-r"
                                 data-sign="Ctrl"><p
                                     class="keyboard__value">Ctrl</p></div>
-                            <div class="keyboard__key_size-one"
-                                id="ArrowLeft"
+                            <div class="keyboard__key_size-one" id="ArrowLeft"
                                 data-sign="◀"><p
                                     class="keyboard__value">◀</p></div>
-                            <div class="keyboard__key_size-one"
-                                id="ArrowDown"
+                            <div class="keyboard__key_size-one" id="ArrowDown"
                                 data-sign="▼"><p
                                     class="keyboard__value">▼</p></div>
-                            <div class="keyboard__key_size-one"
-                                id="ArrowRight"
+                            <div class="keyboard__key_size-one" id="ArrowRight"
                                 data-sign="▶"><p
                                     class="keyboard__value">▶</p></div>
 
@@ -351,15 +301,33 @@
 
                     </div>
                 </section>
-
-            </div>
-        </main>
-        <footer class="footer">
-        </footer>
-        <script src="assets/js/register.js"></script>
-        <script src="assets/js/opensettings.js"></script>
-        <script src="assets/js/typingtest.js" type="module"></script>
-        <script src="assets/js/mode.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </body>
-</html>
+                <section class="hints">
+                    <p class="hints__text" id="firsthint"></p>
+                    <p class="hints__text" id="secondhint"></p>
+                    <p class="hints__text" id="thirdhint"></p>
+                    <p class="hints__text" id="fourthhint"></p>
+                    <img src="assets/img/learning/hands/hands.png" alt
+                        class="hints__image" id="hands-colorful">
+                    <img src="assets/img/learning/hands/hands-empty.png" alt
+                        class="hints__image" id="hands-empty">
+                    <img src="assets/img/learning/hands/hands-empty-left.png"
+                        alt
+                        class="hints__image" id="hands-empty-left">
+                    <img src="assets/img/learning/hands/hands-empty-right.png"
+                        alt
+                        class="hints__image" id="hands-empty-right">
+                </section>
+                <section class="buttons">
+                    <button class="buttons__button"
+                        id="back">Назад</button>
+                    <button class="buttons__button"
+                        onclick="if(!isAnimationWork){surrentStep++;showStep();isAnimationWork = true;}"
+                        id="next">Вперед</button>
+                </section>
+            </main>
+            <footer class="footer"></footer>
+            <script src="assets/js/register.js"></script>
+            <script src="assets/js/showkey.js"></script>
+            <script src="assets/js/learninganimations.js"></script>
+        </body>
+    </html>

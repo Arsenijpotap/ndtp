@@ -3,19 +3,25 @@
 .textfiield {
 	padding-top: 15vw;
 	position: relative;
-	&__text {
+	white-space: nowrap;
+	// df
+	&__text-normal {
 		position: relative;
 		left: 45%;
 		font-size: 2.5vw;
 		white-space: nowrap;
-		&::first-letter {
-			color: red;
-		}
+	}
+	&__text-active {
+		position: relative;
+		left: 45.3%;
+		font-size: 2.5vw;
+		white-space: nowrap;
+		color: red;
 	}
 
 	&__description {
 		position: relative;
-		left: 33%;
+		left: 30%;
 		font-size: 2.5vw;
 	}
 }

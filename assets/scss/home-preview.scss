@@ -27,6 +27,45 @@
 		text-shadow: 2px 3px 4px red;
 		font-weight: 600;
 	}
+	&__heading-item {
+		display: inherit;
+		margin: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		opacity: 0;
+		&.animation {
+			border-right: 0.15em solid $blue;
+			animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+			-webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+		}
+	}
+	&__heading-item:nth-child(2) {
+		animation-delay: 1.5s;
+	}
+	&__heading-item:nth-child(3) {
+		animation-delay: 2.8s;
+	}
+
+	/* The typing effect */
+	@keyframes typing {
+		from {
+			width: 0;
+		}
+		to {
+			width: 100%;
+		}
+	}
+
+	/* The typewriter cursor effect */
+	@keyframes blink-caret {
+		from,
+		to {
+			border-color: transparent;
+		}
+		50% {
+			border-color: $blue;
+		}
+	}
 
 	&__button {
 		position: relative;

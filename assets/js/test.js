@@ -1,20 +1,28 @@
-// `use strict`;
-// document.addEventListener("keypress", keydown);
-// let space = document.getElementById("space");
+// // function revealText(element) {
+// // 	const str = element.textContent.split("");
+// // 	const classes = "animate animate__animated animate__bounce";
+// // 	element.innerHTML = str
+// // 		.map((el, i) => `<span class="${classes}" style="--animation-delay: ${(i * 200) / 1000}s">${el}</span>`)
+// // 		.join("");
+// // 	console.log(element);
+// // }
 
-// function keydown(keypress) {
-// 	console.log(keypress.key);
-// 	for (let i = 0; i < keysSizeAuto.length; i++) {
-// 		if (keysSizeAuto[i].getAttribute("data-sign") == keypress.key) {
-// 			keysSizeAuto[i].children[0].style = "color:red;";
-// 		}
-// 	}
-// 	for (let i = 0; i < keysSizeOne.length; i++) {
-// 		if (keysSizeOne[i].getAttribute("data-sign") == keypress.key) {
-// 			keysSizeOne[i].children[0].style = "color:red;";
-// 		}
-// 	}
-// 	if (keypress.key == " ") {
-// 		space.children[0].style = "color:red;";
-// 	}
-// }
+// // const dataAnimations = {
+// // 	revealText: revealText,
+// // };
+
+// // // const getChildren = (el) => {
+// // // 	return [...el.childNodes];
+// // // }
+// // // const getAll = () => {
+// // // 	let res = [];
+// // // 	res =
+// // // }
+// document.addEventListener("click", (e) => {
+// 	e.target.remove();
+// 	e.stopImmediatePropagation();
+// });
+// document.addEventListener("click", (e) => {
+// 	e.target.remove();
+// 	e.stopImmediatePropagation();
+// });

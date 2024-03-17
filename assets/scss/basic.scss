@@ -1,9 +1,11 @@
 @import "fonts", "reset", "vars";
 html {
+	// filter: invert(1);
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 body {
-	font-family: "Poppins", sans-serif;
+	font-family: $main-font;
 	color: $light;
 
 	background-color: $background;

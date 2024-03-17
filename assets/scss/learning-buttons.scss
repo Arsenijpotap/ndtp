@@ -1,0 +1,35 @@
+@import "basic";
+.buttons {
+	z-index: 99;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	gap: 60vw;
+	padding-bottom: 2vw;
+
+	&__button {
+		z-index: 20;
+		display: inline-block;
+		color: white;
+		padding: 1vw;
+		font-size: 1.5vw;
+		border: 0.25vw solid white;
+		border-radius: 1.3vw;
+		background-color: #06050a;
+		transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+		&:hover {
+			transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			box-shadow: 0 0 1vw white;
+		}
+	}
+}

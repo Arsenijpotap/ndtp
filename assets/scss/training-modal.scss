@@ -1,0 +1,117 @@
+@import "basic";
+.modal {
+	left: 50%;
+	top: -100vh;
+	padding: 2vw;
+	transform: translate(-50%);
+	background-color: $keyboard;
+	border-radius: 1vw;
+	//display: none;
+	position: absolute;
+	transition: 1s;
+	z-index: 9990;
+	max-width: 754px;
+	width: 95dvw;
+	height: 40vw;
+	box-shadow: 0 0 0.6vw $keyboard-border;
+	border: solid 0.15vw $keyboard-border;
+	-webkit-border-radius: 0.7vw;
+	-moz-border-radius: 0.7vw;
+	-ms-border-radius: 0.7vw;
+	-o-border-radius: 0.7vw;
+	-webkit-transform: translate(-50%);
+	-moz-transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	-o-transform: translate(-50%);
+
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	&__chart {
+		bottom: 0;
+	}
+
+	&__checkbox {
+		display: inline;
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__more-info {
+		display: flex;
+		column-gap: 10px;
+	}
+
+	&__results {
+		transition: 0.4s;
+		font-family: $main-font;
+		color: $light;
+		//text-align: center;
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-ms-transition: 0.4s;
+		-o-transition: 0.4s;
+	}
+	&__link {
+		display: block;
+		margin: 0 2vw 0 auto;
+		opacity: 0.5;
+		transition: 0.4s;
+		font-size: 1.1vw;
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-ms-transition: 0.4s;
+		-o-transition: 0.4s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+	&__info {
+		margin: 0.5vw 0;
+		display: flex;
+		justify-content: space-around;
+	}
+	&__content {
+		margin-top: 1vw;
+	}
+	// &__title {
+	// 	margin-left: 2vw;
+	// 	font-size: 1.1vw;
+	// }
+	&__button {
+		position: absolute;
+		bottom: 2vw;
+		display: block;
+		border-radius: 0.5vw;
+		transition: 0.4s;
+		padding: 1vw 2vw;
+		box-shadow: 0 0 0.6vw $keyboard-border;
+		border: solid 0.15vw $keyboard-border;
+		-webkit-border-radius: 0.5vw;
+		-moz-border-radius: 0.5vw;
+		-ms-border-radius: 0.5vw;
+		-o-border-radius: 0.5vw;
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-ms-transition: 0.4s;
+		-o-transition: 0.4s;
+		left: 50%;
+		transform: translate(-50%);
+		-webkit-transform: translate(-50%);
+		-moz-transform: translate(-50%);
+		-ms-transform: translate(-50%);
+		-o-transform: translate(-50%);
+		&:hover {
+			transform: scale(1.05) translate(-50%);
+			-webkit-transform: scale(1.05) translate(-50%);
+			-moz-transform: scale(1.05) translate(-50%);
+			-ms-transform: scale(1.05) translate(-50%);
+			-o-transform: scale(1.05) translate(-50%);
+			box-shadow: 0 0 0.8vw white;
+		}
+	}
+}
