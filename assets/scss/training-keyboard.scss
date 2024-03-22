@@ -1,5 +1,8 @@
 @import "basic";
-
+:root {
+	--active-color: $active;
+	--hint-color: $hint;
+}
 .keyboard {
 	perspective: 50vw;
 	margin: 0 auto;
@@ -55,18 +58,22 @@
 	&__key {
 		&_size-one {
 			&.active {
-				box-shadow: 0 0 1vw $active;
-				border: solid 0.15vw $active;
-				color: $active;
+				box-shadow: 0 0 1vw var(--active-color);
+				border: solid 0.15vw var(--active-color);
+				color: var(--active-color);
 				font-size: 1.2vw;
 			}
 			&.hint {
-				box-shadow: 0 0 1vw $hint;
-				border: solid 0.15vw $hint;
-				color: $hint;
+				box-shadow: 0 0 1vw var(--hint-color);
+				border: solid 0.15vw var(--hint-color);
+				color: var(--hint-color);
 				font-size: 1.2vw;
 			}
-			transition: font-size, color, border, box-shadow 0.2s;
+			transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -81,26 +88,46 @@
 			-o-border-radius: 0.7vw;
 			box-shadow: 0 0 0.6vw $keyboard-border;
 			font-size: 1.1vw;
-			-webkit-transition: font-size, color, border, box-shadow 0.2s;
-			-moz-transition: font-size, color, border, box-shadow 0.2s;
-			-ms-transition: font-size, color, border, box-shadow 0.2s;
-			-o-transition: font-size, color, border, box-shadow 0.2s;
+			-webkit-transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
+			-moz-transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
+			-ms-transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
+			-o-transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
 		}
 
 		&_size-auto {
 			&.active {
-				box-shadow: 0 0 1vw $active;
-				border: solid 0.15vw $active;
-				color: $active;
+				box-shadow: 0 0 1vw var(--active-color);
+				border: solid 0.15vw var(--active-color);
+				color: var(--active-color);
 				font-size: 1.2vw;
 			}
 			&.hint {
-				box-shadow: 0 0 1vw $hint;
-				border: solid 0.15vw $hint;
-				color: $hint;
+				box-shadow: 0 0 1vw var(--hint-color);
+				border: solid 0.15vw var(--hint-color);
+				color: var(--hint-color);
 				font-size: 1.2vw;
 			}
-			transition: font-size, color, border, box-shadow 0.2s;
+			transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -114,10 +141,26 @@
 			background-color: $keyboard;
 			border: solid 0.15vw $keyboard-border;
 			box-shadow: 0 0 0.6vw $keyboard-border;
-			-webkit-transition: font-size, color, border, box-shadow 0.2s;
-			-moz-transition: font-size, color, border, box-shadow 0.2s;
-			-ms-transition: font-size, color, border, box-shadow 0.2s;
-			-o-transition: font-size, color, border, box-shadow 0.2s;
+			-webkit-transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
+			-moz-transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
+			-ms-transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
+			-o-transition:
+				font-size,
+				color,
+				border,
+				box-shadow 0.2s;
 		}
 	}
 	//* keyboard points
@@ -128,16 +171,16 @@
 	//
 	//
 	&.points .keyboard__key_size-one.active .keyboard__value {
-		background-color: $active !important;
+		background-color: var(--active-color) !important;
 	}
 	&.points .keyboard__key_size-auto.active .keyboard__value {
-		background-color: $active !important;
+		background-color: var(--active-color) !important;
 	}
 	&.points .keyboard__key_size-one.hint .keyboard__value {
-		background-color: $hint !important;
+		background-color: var(--hint-color) !important;
 	}
 	&.points .keyboard__key_size-auto.hint .keyboard__value {
-		background-color: $hint !important;
+		background-color: var(--hint-color) !important;
 	}
 	&.points .keyboard__key_size-one {
 		padding: 1vw;

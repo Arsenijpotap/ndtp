@@ -8,7 +8,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a,
@@ -77,7 +78,8 @@ input::-ms-clear {
 button,
 input[type=submit] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
@@ -110,7 +112,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #06050a;
 }
 body.active {
@@ -131,11 +133,13 @@ body.active {
   border-radius: 1vw;
   position: absolute;
   transition: 1s;
-  z-index: 9990;
-  max-width: 754px;
-  width: 95dvw;
-  height: 40vw;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  z-index: 99;
+  max-width: 760px;
+  width: 90dvw;
+  height: 70vh;
+  font-size: 1.1vw;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
   border: solid 0.15vw #1f1f1f;
   -webkit-border-radius: 0.7vw;
   -moz-border-radius: 0.7vw;
@@ -151,23 +155,69 @@ body.active {
   -o-transition: 1s;
 }
 .modal__chart {
-  bottom: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.modal__past-results {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.modal__additionally-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.5vw;
+  height: 40vh;
+  width: 100%;
+  position: relative;
 }
 .modal__checkbox {
+  z-index: 9999;
   display: inline;
+  transition: 0.4s;
   opacity: 0.5;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
 .modal__checkbox:hover {
   opacity: 1;
 }
+.modal__checkbox:nth-child(1) {
+  float: right;
+}
+.modal__checkbox:nth-child(2) {
+  float: right;
+  margin-right: 10px;
+}
 .modal__more-info {
-  display: flex;
-  column-gap: 10px;
+  margin: 0 auto;
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .modal__results {
   transition: 0.4s;
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
+  margin-right: 10px;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
@@ -189,20 +239,25 @@ body.active {
 }
 .modal__info {
   margin: 0.5vw 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .modal__content {
-  margin-top: 1vw;
+  margin: 1vw 2vw 0 2vw;
 }
 .modal__button {
   position: absolute;
-  bottom: 2vw;
+  bottom: 1.3vw;
   display: block;
   border-radius: 0.5vw;
   transition: 0.4s;
   padding: 1vw 2vw;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
   border: solid 0.15vw #1f1f1f;
   -webkit-border-radius: 0.5vw;
   -moz-border-radius: 0.5vw;
@@ -220,10 +275,27 @@ body.active {
   -o-transform: translate(-50%);
 }
 .modal__button:hover {
-  transform: scale(1.05) translate(-50%);
-  -webkit-transform: scale(1.05) translate(-50%);
-  -moz-transform: scale(1.05) translate(-50%);
-  -ms-transform: scale(1.05) translate(-50%);
-  -o-transform: scale(1.05) translate(-50%);
-  box-shadow: 0 0 0.8vw white;
+  transform: scale(1.05) translate(-47.5%);
+  -webkit-transform: scale(1.05) translate(-47.5%);
+  -moz-transform: scale(1.05) translate(-47.5%);
+  -ms-transform: scale(1.05) translate(-47.5%);
+  -o-transform: scale(1.05) translate(-47.5%);
+  -webkit-box-shadow: 0 0 0.8vw white;
+          box-shadow: 0 0 0.8vw white;
+}
+.modal__table {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.modal__table td {
+  padding: 0.05vw 1vw;
+  text-align: center;
+}
+.modal__table th {
+  text-align: center;
+  padding: 0.3vw 1vw;
+}
+.modal__tr-top {
+  padding: 0.05vw 1vw;
+  text-align: center;
 }

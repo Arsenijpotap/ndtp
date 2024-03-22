@@ -8,7 +8,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a,
@@ -77,7 +78,8 @@ input::-ms-clear {
 button,
 input[type=submit] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
@@ -110,7 +112,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #06050a;
 }
 body.active {
@@ -134,6 +136,7 @@ body.active {
   content: "";
   width: 100%;
   height: 80%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(rgb(5, 31, 52)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(5, 31, 52), rgba(0, 0, 0, 0));
 }
 
@@ -164,16 +167,17 @@ body.active {
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
-  transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
   opacity: 1;
 }
 
 .button {
   display: inline-block;
-  color: white;
+  color: #ffffff;
   padding: 1vw;
   font-size: 2vw;
-  border: 0.25vw solid white;
+  border: 0.25vw solid #ffffff;
   border-radius: 1.3vw;
   background-color: #06050a;
   transition: 0.5s;
@@ -188,5 +192,6 @@ body.active {
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
-  box-shadow: 0 0 1vw white;
+  -webkit-box-shadow: 0 0 1vw #ffffff;
+          box-shadow: 0 0 1vw #ffffff;
 }

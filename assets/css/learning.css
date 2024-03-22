@@ -11,7 +11,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a,
@@ -80,7 +81,8 @@ input::-ms-clear {
 button,
 input[type=submit] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
@@ -113,7 +115,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #06050a;
 }
 body.active {
@@ -128,7 +130,8 @@ body.active {
 .keyboard {
   z-index: 10;
   transition: 1s;
-  perspective: 50vw;
+  -webkit-perspective: 50vw;
+          perspective: 50vw;
   margin: 0 auto;
   padding-top: 14vw;
   padding-bottom: 5vw;
@@ -141,8 +144,13 @@ body.active {
 .keyboard__back-plate {
   border-radius: 1vw;
   transform: rotateX(10deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 auto;
   width: 60vw;
   height: 19.5vw;
@@ -161,14 +169,17 @@ body.active {
 .keyboard__row {
   translate: -0.5% -5%;
   width: 101%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  column-gap: 0.7vw;
+  -webkit-column-gap: 0.7vw;
+     -moz-column-gap: 0.7vw;
+          column-gap: 0.7vw;
 }
 .keyboard__value {
   transition: 0.2s;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -179,10 +190,19 @@ body.active {
   -o-transition: 0.2s;
 }
 .keyboard__key_size-one {
+  -webkit-transition: font-size, color, border, background-color, 0.2s, -webkit-box-shadow;
+  transition: font-size, color, border, background-color, 0.2s, -webkit-box-shadow;
   transition: font-size, color, border, box-shadow, background-color, 0.2s;
+  transition: font-size, color, border, box-shadow, background-color, 0.2s, -webkit-box-shadow;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 0.7vw;
   width: 3vw;
   height: 3vw;
@@ -192,7 +212,8 @@ body.active {
   -moz-border-radius: 0.7vw;
   -ms-border-radius: 0.7vw;
   -o-border-radius: 0.7vw;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
   font-size: 1.1vw;
   -webkit-transition: font-size, color, border, box-shadow, background-color, 0.2s;
   -moz-transition: font-size, color, border, box-shadow, background-color, 0.2s;
@@ -200,33 +221,47 @@ body.active {
   -o-transition: font-size, color, border, box-shadow, background-color, 0.2s;
 }
 .keyboard__key_size-one.active {
-  box-shadow: 0 0 1vw #099ac7;
+  -webkit-box-shadow: 0 0 1vw #099ac7;
+          box-shadow: 0 0 1vw #099ac7;
   border: solid 0.15vw #099ac7;
   color: #099ac7;
   font-size: 1.2vw;
 }
 .keyboard__key_size-auto {
+  -webkit-transition: font-size, color, border, background-color, 0.2s, -webkit-box-shadow;
+  transition: font-size, color, border, background-color, 0.2s, -webkit-box-shadow;
   transition: font-size, color, border, box-shadow, background-color, 0.2s;
+  transition: font-size, color, border, box-shadow, background-color, 0.2s, -webkit-box-shadow;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 0.7vw;
   -webkit-border-radius: 0.7vw;
   -moz-border-radius: 0.7vw;
   -ms-border-radius: 0.7vw;
   -o-border-radius: 0.7vw;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 3vw;
   background-color: #101010;
   border: solid 0.15vw #1f1f1f;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
   -webkit-transition: font-size, color, border, box-shadow, background-color, 0.2s;
   -moz-transition: font-size, color, border, box-shadow, background-color, 0.2s;
   -ms-transition: font-size, color, border, box-shadow, background-color, 0.2s;
   -o-transition: font-size, color, border, box-shadow, background-color, 0.2s;
 }
 .keyboard__key_size-auto.active {
-  box-shadow: 0 0 1vw #099ac7;
+  -webkit-box-shadow: 0 0 1vw #099ac7;
+          box-shadow: 0 0 1vw #099ac7;
   border: solid 0.15vw #099ac7;
   color: #099ac7;
   font-size: 1.2vw;
@@ -279,7 +314,8 @@ body.active {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a,
@@ -348,7 +384,8 @@ input::-ms-clear {
 button,
 input[type=submit] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
@@ -381,7 +418,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #06050a;
 }
 body.active {
@@ -394,8 +431,12 @@ body.active {
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   z-index: 2;
   margin: 1vw 0 0 0;
@@ -408,22 +449,35 @@ body.active {
   -o-transform: translateX(-50%);
 }
 .header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .header__logo {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  column-gap: 10px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
 }
 .header__icon {
   width: 5vw;
   height: 5vw;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .header__name {
-  color: white;
+  color: #ffffff;
   font-size: 2.5vw;
 }
 
@@ -436,7 +490,8 @@ body.active {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a,
@@ -505,7 +560,8 @@ input::-ms-clear {
 button,
 input[type=submit] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
@@ -538,7 +594,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #06050a;
 }
 body.active {
@@ -571,6 +627,10 @@ body.active {
 
 #thirdhint {
   margin: 53vw auto;
+}
+
+#fourthhint {
+  margin: -80vw auto;
 }
 
 #hands-empty-right {
@@ -624,7 +684,8 @@ body.active {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a,
@@ -693,7 +754,8 @@ input::-ms-clear {
 button,
 input[type=submit] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
@@ -726,7 +788,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #06050a;
 }
 body.active {
@@ -739,12 +801,18 @@ body.active {
 }
 
 .buttons {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   z-index: 99;
   width: 100%;
   position: fixed;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 60vw;
   padding-bottom: 2vw;
 }
@@ -769,7 +837,8 @@ body.active {
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
-  box-shadow: 0 0 1vw white;
+  -webkit-box-shadow: 0 0 1vw white;
+          box-shadow: 0 0 1vw white;
 }
 
 html {

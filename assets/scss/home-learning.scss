@@ -1,0 +1,187 @@
+@import "basic";
+
+//^ Laptop
+
+.laptop {
+    position: relative;
+    left: 0;
+    width: 584px;
+    height: 405px;
+}
+
+@media (max-width: 720px) {
+    #css-laptop {
+        padding: 0;
+        margin-top: -60px;
+        margin-bottom: 20px;
+    }
+
+    .laptop {
+        -webkit-transform: scale(0.57);
+        transform: scale(0.57);
+    }
+}
+
+.laptop * {
+    position: absolute;
+}
+
+.laptop .shadow {
+    left: 17px;
+    right: 17px;
+    top: 40px;
+    height: 490px;
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    background: #7692b3;
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+}
+
+.laptop .top {
+    width: 100%;
+
+    border-radius: 20px;
+    background: linear-gradient(45deg, #e5ebf2, #f3f8fb);
+    transform-origin: bottom;
+    z-index: 100;
+    transform: perspective(880px) rotateX(-150deg);
+    height: 200px;
+    margin-top: 195px;
+    transition: 2s;
+    &.animate__animated {
+        transform: perspective(880px) rotateX(0deg);
+        width: 100%;
+        height: 100%;
+        margin-top: -10px;
+    }
+}
+
+// .laptop .lid {
+//     width: 100%;
+//     height: 100%;
+//     background: -webkit-linear-gradient(45deg, #e5ebf2, #f3f8fb);
+//     background: linear-gradient(45deg, #e5ebf2, #f3f8fb);
+//     border-radius: 20px;
+//     box-shadow: inset 1px -4px 6px rgba(145, 161, 181, 0.3);
+//     transform-origin: bottom;
+//     height: 142px;
+//     transform: perspective(880px) rotateX(-140deg);
+//     transition: 2s;
+// }
+.laptop .lid {
+    backface-visibility: hidden;
+    margin-top: -10px;
+
+    width: 100%;
+    z-index: 100;
+    transition: 2s;
+    background: -webkit-linear-gradient(45deg, #e5ebf2, #f3f8fb);
+    background: linear-gradient(45deg, #e5ebf2, #f3f8fb);
+    border-radius: 20px;
+    box-shadow: inset 1px -4px 6px rgba(145, 161, 181, 0.3);
+    transform-origin: bottom;
+    transform: perspective(880px) rotateX(-150deg);
+    height: 200px;
+    margin-top: 195px;
+
+    &.animate__animated {
+        transform: perspective(880px) rotateX(0deg);
+
+        width: 100%;
+        height: 100%;
+        margin-top: -10px;
+    }
+}
+
+.laptop .camera {
+    --size: 4px;
+    width: var(--size);
+    height: var(--size);
+    top: 10px;
+    left: 50%;
+    margin-left: calc(var(--size) / -2);
+    border-radius: 50%;
+    background: #dae0e8;
+}
+
+.laptop .screen {
+    top: 24px;
+    bottom: 50px;
+    left: 11px;
+    right: 11px;
+    border-radius: 4px;
+    box-shadow: -1px 1px 6px rgba(171, 183, 204, 0.2);
+    background: url(/assets/img/home/main/learning/page.png);
+    background-size: cover;
+    background-position: center;
+    /*     animation: closing-lid 2s infinite; */
+}
+
+.laptop .chassis {
+    width: 100%;
+    height: 200px;
+    top: calc(100% - 11px);
+    border-radius: 8px 8px 14px 14px;
+    -webkit-transform: perspective(880px) rotateX(30deg);
+    transform: perspective(880px) rotateX(30deg);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    background:
+        -webkit-linear-gradient(rgba(145, 161, 181, 0.2), rgba(145, 161, 181, 0)),
+        -webkit-linear-gradient(45deg, #e5ebf2, #f3f8fb);
+    background: linear-gradient(rgba(145, 161, 181, 0.2), rgba(145, 161, 181, 0)),
+        linear-gradient(45deg, #e5ebf2, #f3f8fb);
+    box-shadow:
+        inset 0 -2px 3px rgba(145, 161, 181, 0.5),
+        inset -1px -6px 4px rgba(253, 255, 255, 0.9);
+}
+
+.laptop .chassis * {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    background: -webkit-linear-gradient(45deg, #b2bdcc, #c1ccd8);
+    background: linear-gradient(45deg, #b2bdcc, #c1ccd8);
+    box-shadow: 1px 1px 1px hsla(0, 0%, 100%, 0.75);
+}
+
+.laptop .keyboard img {
+    width: 100%;
+    height: 100%;
+}
+
+.laptop .keyboard {
+    left: 28px;
+    right: 28px;
+    top: 8px;
+    height: 126px;
+}
+//*learning
+
+.learning {
+    position: relative;
+
+    &::before {
+        z-index: -1;
+        position: absolute;
+        top: 10%;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(0deg, #00000000, rgb(43, 42, 42), #00000000);
+    }
+    margin: 10vw 0 10vw 0;
+
+    &__content {
+        width: 100%;
+        display: flex;
+    }
+
+    &__info {
+        margin-left: 5vw;
+        width: 47vw;
+    }
+}

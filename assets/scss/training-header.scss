@@ -22,12 +22,14 @@
 	&__logo {
 		align-items: center;
 		display: flex;
+		-moz-column-gap: 10px;
 		column-gap: 10px;
 	}
 
 	&__icon {
 		width: 5vw;
 		height: 5vw;
+		-o-object-fit: cover;
 		object-fit: cover;
 	}
 
@@ -41,31 +43,50 @@
 		font-size: 2vw;
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
-		-khtml-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
 	}
 	&__settings-icon {
-		transition: rotate 1s ease, opacity 0.2s;
+		transition:
+			rotate 1s ease,
+			opacity 0.2s;
 		width: 3vw;
 		height: 3vw;
 		z-index: 20;
-		-webkit-transition: rotate 1s ease, opacity 0.2s;
-		-moz-transition: rotate 1s ease, opacity 0.2s;
-		-ms-transition: rotate 1s ease, opacity 0.2s;
-		-o-transition: rotate 1s ease, opacity 0.2s;
+		-webkit-transition:
+			rotate 1s ease,
+			opacity 0.2s;
+		-moz-transition:
+			rotate 1s ease,
+			opacity 0.2s;
+		-ms-transition:
+			rotate 1s ease,
+			opacity 0.2s;
+		-o-transition:
+			rotate 1s ease,
+			opacity 0.2s;
 		position: relative;
 		&:hover {
 			rotate: 180deg;
 		}
 		&.active {
-			transition: rotate 0s ease, opacity 0.2s;
+			transition:
+				rotate 0s ease,
+				opacity 0.2s;
 			content: url("/assets/icons/training/header/cross.png");
-			-webkit-transition: rotate 0s ease, opacity 0.2s;
-			-moz-transition: rotate 0s ease, opacity 0.2s;
-			-ms-transition: rotate 0s ease, opacity 0.2s;
-			-o-transition: rotate 0s ease, opacity 0.2s;
+			-webkit-transition:
+				rotate 0s ease,
+				opacity 0.2s;
+			-moz-transition:
+				rotate 0s ease,
+				opacity 0.2s;
+			-ms-transition:
+				rotate 0s ease,
+				opacity 0.2s;
+			-o-transition:
+				rotate 0s ease,
+				opacity 0.2s;
 
 			&:hover {
 				rotate: 0deg;
@@ -118,10 +139,6 @@
 		background-color: rgb(80, 80, 80);
 		font-size: 1.5vw;
 		padding: 1vw;
-		-webkit-transition: 0.5s;
-		-moz-transition: 0.5s;
-		-ms-transition: 0.5s;
-		-o-transition: 0.5s;
 
 		&:first-child {
 			border-radius: 2vw 0 0 2vw;
@@ -132,13 +149,75 @@
 		}
 		&:last-child {
 			border-radius: 0 2vw 2vw 0;
-			-webkit-border-radius: 0 2vw 2vw 0;
-			-moz-border-radius: 0 2vw 2vw 0;
-			-ms-border-radius: 0 2vw 2vw 0;
-			-o-border-radius: 0 2vw 2vw 0;
 		}
 	}
+	&__color-form {
+	}
+	&__text {
+		display: block;
+		position: relative;
+	}
+	&__text input {
+		position: absolute;
+		right: 13vw;
+	}
+	&__title {
+		margin-top: 3vh;
+		font-size: 1.3vw;
+	}
+	&__reset-button {
+		opacity: 0.5;
+		transition: 0.5s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	&__input {
+		display: none;
+	}
+	&__input + &__label {
+		transition: 0.4s;
+		display: block;
+		position: relative;
+		width: 3em;
+		height: 1.6em;
+		margin-bottom: 20px;
+		background: $hint;
+		border-radius: 0.2em;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+	&__input + &__label:before {
+		content: "";
+		display: block;
+		width: 1.2em;
+		height: 1.2em;
+		border-radius: 0.2em;
+		background: #f7f2f2;
+		position: absolute;
+		left: 0.2em;
+		top: 0.2em;
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+	&__input:checked + &__label {
+		background: $active;
+	}
+	&__input:checked + &__label:before {
+		left: 1.6em;
+	}
+	&__input {
+	}
+	&__setting-section {
+		margin-top: 1vw;
+		display: flex;
+		width: 15vw;
+		justify-content: space-between;
+	}
 }
+
 #easy.active {
 	background-color: rgb(0, 94, 0);
 }

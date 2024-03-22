@@ -8,7 +8,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a,
@@ -77,7 +78,8 @@ input::-ms-clear {
 button,
 input[type=submit] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
@@ -110,7 +112,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #06050a;
 }
 body.active {
@@ -128,8 +130,12 @@ body.active {
   margin: 1vw 0;
 }
 .choice__logo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 30vw;
   margin: 0 auto;
 }
@@ -155,7 +161,7 @@ body.active {
   display: block;
   width: 0.2vw;
   height: 2vw;
-  background-color: white;
+  background-color: #ffffff;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -175,7 +181,7 @@ body.active {
   display: block;
   width: 0.2vw;
   height: 2vw;
-  background-color: white;
+  background-color: #ffffff;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -187,7 +193,8 @@ body.active {
   -o-transition: 0.4s;
 }
 .choice__logo-item {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   transition: 0.5s;
   width: 3vw;
   border-bottom: 0.2vw solid rgba(0, 0, 0, 0);
@@ -199,7 +206,7 @@ body.active {
 }
 .choice__logo-item.active {
   transform: translate(0, -0.5vw);
-  border-bottom: 0.2vw solid white;
+  border-bottom: 0.2vw solid #ffffff;
   -webkit-transform: translate(0, -0.5vw);
   -moz-transform: translate(0, -0.5vw);
   -ms-transform: translate(0, -0.5vw);
@@ -234,6 +241,7 @@ body.active {
   z-index: -2;
   top: 0;
   left: -10vw;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(rgb(46, 46, 46)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(46, 46, 46), rgba(0, 0, 0, 0));
 }
 .choice__slide.active {
@@ -248,6 +256,8 @@ body.active {
   font-size: 2vw;
 }
 .choice__about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .choice__title {
@@ -258,6 +268,8 @@ body.active {
   font-size: 1.8vh;
 }
 .choice__example {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 4vw;
 }
@@ -281,20 +293,24 @@ body.active {
 }
 .choice__buttons {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: fixed;
   left: 0;
   bottom: 0;
   padding-bottom: 3vw;
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 .choice__button {
   display: inline-block;
-  color: white;
+  color: #ffffff;
   padding: 1vw;
   font-size: 1vw;
-  border: 0.25vw solid white;
+  border: 0.25vw solid #ffffff;
   border-radius: 1.3vw;
   background-color: #06050a;
   transition: 0.5s;
@@ -309,7 +325,8 @@ body.active {
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
-  box-shadow: 0 0 1vw white;
+  -webkit-box-shadow: 0 0 1vw #ffffff;
+          box-shadow: 0 0 1vw #ffffff;
 }
 
 #css .choice__image {
@@ -321,33 +338,41 @@ body.active {
 }
 
 #python::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(#050038), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #050038, rgba(0, 0, 0, 0));
 }
 
 #html::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(#2a0808), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #2a0808, rgba(0, 0, 0, 0));
 }
 
 #js::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(#2c2c0f), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #2c2c0f, rgba(0, 0, 0, 0));
 }
 
 #css::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(#031b34), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #031b34, rgba(0, 0, 0, 0));
 }
 
 #c::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(#060435), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #060435, rgba(0, 0, 0, 0));
 }
 
 #ch::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(#1a062e), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #1a062e, rgba(0, 0, 0, 0));
 }
 
 #cpp::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(#080539), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #080539, rgba(0, 0, 0, 0));
 }
 
 #java::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(#2a1603), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #2a1603, rgba(0, 0, 0, 0));
 }

@@ -1,0 +1,27 @@
+@import "basic";
+
+.textfield {
+	padding-top: 15vw;
+	position: relative;
+	white-space: nowrap;
+	// df
+	&__text-normal {
+		position: relative;
+		left: 45%;
+		font-size: 2.5vw;
+		white-space: nowrap;
+	}
+	&__text-active {
+		position: relative;
+		left: 45.3%;
+		font-size: 2.5vw;
+		white-space: nowrap;
+		color: red;
+	}
+
+	&__description {
+		position: relative;
+		left: 33%;
+		font-size: 2.5vw;
+	}
+}

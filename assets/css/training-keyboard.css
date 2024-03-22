@@ -8,7 +8,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a,
@@ -77,7 +78,8 @@ input::-ms-clear {
 button,
 input[type=submit] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
@@ -110,7 +112,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #06050a;
 }
 body.active {
@@ -122,22 +124,34 @@ body.active {
   margin: 0 auto;
 }
 
+:root {
+  --active-color: $active;
+  --hint-color: $hint;
+}
+
 .keyboard {
-  perspective: 50vw;
+  -webkit-perspective: 50vw;
+          perspective: 50vw;
   margin: 0 auto;
   padding-top: 7vw;
   padding-bottom: 7vw;
 }
 .keyboard_points {
-  perspective: 50vw;
+  -webkit-perspective: 50vw;
+          perspective: 50vw;
   margin: 0 auto;
   padding-top: 200px;
 }
 .keyboard__back-plate {
   border-radius: 1vw;
   transform: rotateX(10deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 auto;
   width: 60vw;
   height: 19.5vw;
@@ -156,14 +170,17 @@ body.active {
 .keyboard__row {
   translate: -0.5% -5%;
   width: 101%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  column-gap: 0.7vw;
+  -webkit-column-gap: 0.7vw;
+     -moz-column-gap: 0.7vw;
+          column-gap: 0.7vw;
 }
 .keyboard__value {
   transition: 0.2s;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -174,10 +191,19 @@ body.active {
   -o-transition: 0.2s;
 }
 .keyboard__key_size-one {
+  -webkit-transition: font-size, color, border, -webkit-box-shadow 0.2s;
+  transition: font-size, color, border, -webkit-box-shadow 0.2s;
   transition: font-size, color, border, box-shadow 0.2s;
+  transition: font-size, color, border, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 0.7vw;
   width: 3vw;
   height: 3vw;
@@ -187,7 +213,8 @@ body.active {
   -moz-border-radius: 0.7vw;
   -ms-border-radius: 0.7vw;
   -o-border-radius: 0.7vw;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
   font-size: 1.1vw;
   -webkit-transition: font-size, color, border, box-shadow 0.2s;
   -moz-transition: font-size, color, border, box-shadow 0.2s;
@@ -195,60 +222,76 @@ body.active {
   -o-transition: font-size, color, border, box-shadow 0.2s;
 }
 .keyboard__key_size-one.active {
-  box-shadow: 0 0 1vw green;
-  border: solid 0.15vw green;
-  color: green;
+  -webkit-box-shadow: 0 0 1vw var(--active-color);
+          box-shadow: 0 0 1vw var(--active-color);
+  border: solid 0.15vw var(--active-color);
+  color: var(--active-color);
   font-size: 1.2vw;
 }
 .keyboard__key_size-one.hint {
-  box-shadow: 0 0 1vw red;
-  border: solid 0.15vw red;
-  color: red;
+  -webkit-box-shadow: 0 0 1vw var(--hint-color);
+          box-shadow: 0 0 1vw var(--hint-color);
+  border: solid 0.15vw var(--hint-color);
+  color: var(--hint-color);
   font-size: 1.2vw;
 }
 .keyboard__key_size-auto {
+  -webkit-transition: font-size, color, border, -webkit-box-shadow 0.2s;
+  transition: font-size, color, border, -webkit-box-shadow 0.2s;
   transition: font-size, color, border, box-shadow 0.2s;
+  transition: font-size, color, border, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 0.7vw;
   -webkit-border-radius: 0.7vw;
   -moz-border-radius: 0.7vw;
   -ms-border-radius: 0.7vw;
   -o-border-radius: 0.7vw;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 3vw;
   background-color: #101010;
   border: solid 0.15vw #1f1f1f;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
   -webkit-transition: font-size, color, border, box-shadow 0.2s;
   -moz-transition: font-size, color, border, box-shadow 0.2s;
   -ms-transition: font-size, color, border, box-shadow 0.2s;
   -o-transition: font-size, color, border, box-shadow 0.2s;
 }
 .keyboard__key_size-auto.active {
-  box-shadow: 0 0 1vw green;
-  border: solid 0.15vw green;
-  color: green;
+  -webkit-box-shadow: 0 0 1vw var(--active-color);
+          box-shadow: 0 0 1vw var(--active-color);
+  border: solid 0.15vw var(--active-color);
+  color: var(--active-color);
   font-size: 1.2vw;
 }
 .keyboard__key_size-auto.hint {
-  box-shadow: 0 0 1vw red;
-  border: solid 0.15vw red;
-  color: red;
+  -webkit-box-shadow: 0 0 1vw var(--hint-color);
+          box-shadow: 0 0 1vw var(--hint-color);
+  border: solid 0.15vw var(--hint-color);
+  color: var(--hint-color);
   font-size: 1.2vw;
 }
 .keyboard.points .keyboard__key_size-one.active .keyboard__value {
-  background-color: green !important;
+  background-color: var(--active-color) !important;
 }
 .keyboard.points .keyboard__key_size-auto.active .keyboard__value {
-  background-color: green !important;
+  background-color: var(--active-color) !important;
 }
 .keyboard.points .keyboard__key_size-one.hint .keyboard__value {
-  background-color: red !important;
+  background-color: var(--hint-color) !important;
 }
 .keyboard.points .keyboard__key_size-auto.hint .keyboard__value {
-  background-color: red !important;
+  background-color: var(--hint-color) !important;
 }
 .keyboard.points .keyboard__key_size-one {
   padding: 1vw;
@@ -272,19 +315,23 @@ body.active {
 }
 .keyboard.empty .keyboard__key_size-auto.active {
   border: solid 0.15vw #1f1f1f;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
 }
 .keyboard.empty .keyboard__key_size-one.active {
   border: solid 0.15vw #1f1f1f;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
 }
 .keyboard.empty .keyboard__key_size-auto.hint {
   border: solid 0.15vw #1f1f1f;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
 }
 .keyboard.empty .keyboard__key_size-one.hint {
   border: solid 0.15vw #1f1f1f;
-  box-shadow: 0 0 0.6vw #1f1f1f;
+  -webkit-box-shadow: 0 0 0.6vw #1f1f1f;
+          box-shadow: 0 0 0.6vw #1f1f1f;
 }
 
 .keyboard.points #esc .keyboard__value {
