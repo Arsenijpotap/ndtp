@@ -211,10 +211,49 @@
 	&__input {
 	}
 	&__setting-section {
+		position: relative;
 		margin-top: 1vw;
 		display: flex;
 		width: 15vw;
 		justify-content: space-between;
+	}
+	&__range {
+		color: red;
+		position: relative;
+		right: 0;
+	}
+	&__label-range {
+		top: 50%;
+		transform: translate(0, -50%);
+		position: absolute;
+		right: -2vw;
+	}
+
+	&__range {
+		-webkit-appearance: none;
+		position: relative;
+		top: 1.2vw;
+		width: 100%;
+		height: 0.4vw;
+		background: #015e01;
+		outline: none;
+		border-radius: 1vw;
+	}
+
+	&__range::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 1vw;
+		height: 1vw;
+		background: $active;
+		border-radius: 1vw;
+		border: 2px solid $active;
+	}
+
+	&__range::-moz-range-thumb {
+		width: 1vw;
+		height: 1vw;
+		border: 2px solid $active;
 	}
 }
 

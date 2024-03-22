@@ -1,5 +1,4 @@
 `use strict`;
-
 import commandList from "./commandlist.js";
 let textField = document.getElementById("textfield");
 let textFieldFirstLetter = document.getElementById("textfield-active");
@@ -8,31 +7,13 @@ let keysSizeOne = Array.from(document.getElementsByClassName("keyboard__key_size
 let keysSizeAuto = Array.from(document.getElementsByClassName("keyboard__key_size-auto"));
 let isCapsLockOn;
 let commands = commandList[lenguage];
-let validCommands;
+let validCommands, length, text, maxSpeed, chart, secondsNumber, accuracy, startTime, spentTime, endTime, activeKey;
 let textArray = [];
-let length = 6;
-let text;
-
-if (!localStorage.getItem("lastresultslist")) {
-	localStorage.setItem("lastresultslist", JSON.stringify([]));
-}
-if (!localStorage.getItem("isSecondModeOn")) {
-	localStorage.setItem("isSecondModeOn", true);
-}
-console.log();
-console.log(localStorage.getItem("topresultslist"));
-if (!localStorage.getItem("topresultslist")) {
-	localStorage.setItem("topresultslist", JSON.stringify([]));
-}
+let range = document.getElementById("range");
+let rangeLabel = document.getElementById("rangelabel");
 let pastResults = document.getElementsByClassName("modal__past-results")[0];
 let rowContent = document.getElementsByClassName("modal__tr")[0].textContent;
-let maxSpeed;
 let metricList = ["", "с.", "%", "н/с.", "сим."];
-if (localStorage.getItem("isSecondModeOn") == "true") {
-	metricList = ["", "с.", "%", "н/с.", "сим."];
-} else {
-	metricList = ["", "мин.", "%", "н/мин.", "сим."];
-}
 let checkBoxAnimation = document.getElementById("header-checkbox");
 let checkBoxItemOne = document.getElementsByClassName("modal__checkbox")[2];
 let checkBoxItemTwo = document.getElementsByClassName("modal__checkbox")[3];
@@ -42,18 +23,15 @@ let isLockOn = false;
 let resultFirst = document.getElementsByClassName("modal__results")[0];
 let resultSecond = document.getElementsByClassName("modal__results")[1];
 let moreInfoButton = document.getElementsByClassName("modal__link")[0];
-let chart;
 let modalIsOpen = false;
 let modal = document.getElementsByClassName("modal")[0];
 let secondsList = [];
 let speedsList = [];
 let mistakeList = [];
 let correctSpeedsList = [];
-let secondsNumber;
 let isLearningModeOn = false;
 let quantityСorrectAnswer = 0;
 let quantityAnswer = 0;
-let accuracy;
 let tableRows = Array.from(document.getElementsByClassName("modal__tr"));
 let tableRowsTop = Array.from(document.getElementsByClassName("modal__tr-top"));
 let quantityMistakeAnswer = 0;
@@ -61,23 +39,44 @@ let lastResultsList = localStorage.getItem("lastresultslist") || JSON.stringify(
 let topResultsList = localStorage.getItem("topresultslist") || JSON.stringify([]);
 let quantityСorrectAnswerPerSecond = 0;
 let quantityAnswerPerSecond = 0;
-let startTime;
-let spentTime;
-let endTime;
 let table = document.getElementsByClassName("modal__table")[0];
-let activeKey;
 var testIsWork = false;
 let enterIsPress = false;
 let button = document.getElementsByClassName("modal__button")[0];
-const chartCvs = document.getElementById("modalchart");
+let chartCvs = document.getElementById("modalchart");
 let description = document.getElementById("description");
 let rows = Array.from(document.getElementsByClassName("keyboard__row"));
 let modalTime = Array.from(document.getElementsByClassName("modal__time"));
 let modalSpeed = Array.from(document.getElementsByClassName("modal__speed"));
 let moreInfo = document.getElementsByClassName("modal__more-info")[0];
-checkBoxAnimation.checked = Boolean(localStorage.getItem("animationOn") == "true");
 let resultList = {};
 let topList = {};
+var gsy;
+range.value = localStorage.getItem("length");
+length = +localStorage.getItem("length");
+rangeLabel.textContent = length;
+checkBoxAnimation.checked = Boolean(localStorage.getItem("animationOn") == "true");
+if (!localStorage.getItem("length")) {
+	localStorage.setItem("length", "7");
+	length = 7;
+}
+
+if (!localStorage.getItem("lastresultslist")) {
+	localStorage.setItem("lastresultslist", JSON.stringify([]));
+}
+if (!localStorage.getItem("isSecondModeOn")) {
+	localStorage.setItem("isSecondModeOn", true);
+}
+
+if (!localStorage.getItem("topresultslist")) {
+	localStorage.setItem("topresultslist", JSON.stringify([]));
+}
+if (localStorage.getItem("isSecondModeOn") == "true") {
+	metricList = ["", "с.", "%", "н/с.", "сим."];
+} else {
+	metricList = ["", "мин.", "%", "н/мин.", "сим."];
+}
+
 switch (localStorage.getItem("setlanguage")) {
 	case "java":
 		resultList.lenguage = "Java";
@@ -104,15 +103,10 @@ switch (localStorage.getItem("setlanguage")) {
 		resultList.lenguage = "HTML";
 		break;
 }
-keysSizeOne.forEach((elem) => {
-	elem.style = "	transition: 0s;-webkit-transition: 0s;-moz-transition: 0s;-ms-transition: 0s;-o-transition: 0s;";
-	setTimeout(() => {
-		elem.style = "";
-	}, 2000);
-});
 
 function generateList() {
 	textArray = [];
+	console.log(length);
 	validCommands = Array.from(commands);
 	for (let i = 0; i < length; i++) {
 		textArray.push(validCommands.splice(Math.random() * (validCommands.length - 1), 1).join());
@@ -453,7 +447,6 @@ function resultCounting() {
 	}
 	fillLastTable();
 }
-document.addEventListener("keydown", keydown);
 
 setInterval(() => {
 	if (testIsWork) {
@@ -604,16 +597,6 @@ function showMoreInfo() {
 		moreInfo.style.opacity = "1";
 	}, 400);
 }
-
-// showChart();
-button.addEventListener("click", closeModal);
-moreInfoButton.addEventListener("click", showMoreInfo);
-Array.from(document.getElementsByTagName("section")).forEach((section) => {
-	section.addEventListener("click", closeModal);
-});
-
-document.getElementsByTagName("header")[0].addEventListener("click", closeModal);
-checkBoxItemOne.addEventListener("click", modeOne);
 function modeOne() {
 	table.style.opacity = 0;
 	setTimeout(() => {
@@ -643,7 +626,6 @@ function modeOne() {
 		}, 400);
 	}
 }
-checkBoxItemTwo.addEventListener("click", modeTwo);
 function modeTwo() {
 	table.style.opacity = 0;
 	setTimeout(() => {
@@ -680,17 +662,6 @@ function modeTwo() {
 		}, 400);
 	}
 }
-checkBoxAnimation.addEventListener("change", setAnimationWork);
-function setAnimationWork() {
-	if (this.checked) {
-		localStorage.setItem("animationOn", true);
-	} else {
-		localStorage.setItem("animationOn", false);
-	}
-}
-
-checkBoxModeOne.addEventListener("click", visibleModeOne);
-
 function visibleModeOne() {
 	localStorage.setItem("isChartVisible", true);
 	checkBoxModeTwo.style.opacity = "";
@@ -702,8 +673,13 @@ function visibleModeOne() {
 		chartCvs.style.opacity = "1";
 	}, 500);
 }
-checkBoxModeTwo.addEventListener("click", visibleModeTwo);
-
+function setAnimationWork() {
+	if (this.checked) {
+		localStorage.setItem("animationOn", true);
+	} else {
+		localStorage.setItem("animationOn", false);
+	}
+}
 function visibleModeTwo() {
 	localStorage.setItem("isChartVisible", false);
 	chartCvs.style.opacity = 0;
@@ -774,3 +750,25 @@ function sortArray(array) {
 		return firstResult > secondResult ? -1 : firstResult < secondResult ? 1 : 0;
 	});
 }
+
+function setLength() {
+	localStorage.setItem("length", range.value);
+	console.log(range.value);
+	range.value = localStorage.getItem("length");
+	length = +localStorage.getItem("length");
+	rangeLabel.textContent = length;
+}
+document.addEventListener("keydown", keydown);
+button.addEventListener("click", closeModal);
+moreInfoButton.addEventListener("click", showMoreInfo);
+Array.from(document.getElementsByTagName("section")).forEach((section) => {
+	section.addEventListener("click", closeModal);
+});
+document.getElementsByTagName("header")[0].addEventListener("click", closeModal);
+checkBoxItemOne.addEventListener("click", modeOne);
+checkBoxItemTwo.addEventListener("click", modeTwo);
+checkBoxAnimation.addEventListener("change", setAnimationWork);
+checkBoxModeOne.addEventListener("click", visibleModeOne);
+checkBoxModeTwo.addEventListener("click", visibleModeTwo);
+range.addEventListener("change", setLength);
+range.addEventListener("mousemove", setLength);

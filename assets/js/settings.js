@@ -7,18 +7,18 @@ let letterColor = document.getElementById("lettercolor");
 let unCorectColor = document.getElementById("uncorectcolor");
 let resetButton = document.getElementsByClassName("header__reset-button")[0];
 let key = document.getElementsByClassName("keyboard__key_size-one")[0];
-document.documentElement.style.setProperty("--hint-color", localStorage.getItem("unCorectColor"));
-document.documentElement.style.setProperty("--active-color", localStorage.getItem("corectColor"));
-document.getElementById("textfield-active").style.color = localStorage.getItem("letterColor");
-letterColor.value = localStorage.getItem("letterColor");
-corectColor.value = localStorage.getItem("corectColor");
-unCorectColor.value = localStorage.getItem("unCorectColor");
+
 if (!localStorage.getItem("mode")) {
 	localStorage.setItem("mode", "easy");
 }
-if (!localStorage.getItem("unCorectColor")) {
-	reset();
-}
+
+document.documentElement.style.setProperty("--hint-color", localStorage.getItem("unCorectColor"));
+document.documentElement.style.setProperty("--active-color", localStorage.getItem("corectColor"));
+document.getElementById("textfield-active").style.color = localStorage.getItem("letterColor");
+
+letterColor.value == localStorage.getItem("letterColor") ?? "#ff0000";
+corectColor.value = localStorage.getItem("corectColor") ?? "#008000";
+unCorectColor.value = localStorage.getItem("unCorectColor") ?? "#ff0000";
 
 setMode(localStorage.getItem("mode"));
 buttons.forEach((element) => {
@@ -79,11 +79,11 @@ function setLetterColor() {
 	document.getElementById("textfield-active").style.color = this.value;
 }
 function reset() {
-	document.documentElement.style.setProperty("--hint-color", "#ff0000");
 	localStorage.setItem("unCorectColor", "#ff0000");
 	localStorage.setItem("corectColor", "#008000");
 	localStorage.setItem("letterColor", "#ff0000");
 
+	document.documentElement.style.setProperty("--hint-color", "#ff0000");
 	document.documentElement.style.setProperty("--active-color", "#008000");
 	document.getElementById("textfield-active").style.color = "#ff0000";
 }

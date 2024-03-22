@@ -317,6 +317,7 @@ body.active {
   left: 1.6em;
 }
 .header__setting-section {
+  position: relative;
   margin-top: 1vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,6 +326,43 @@ body.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.header__range {
+  color: red;
+  position: relative;
+  right: 0;
+}
+.header__label-range {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  position: absolute;
+  right: -2vw;
+}
+.header__range {
+  -webkit-appearance: none;
+  position: relative;
+  top: 1.2vw;
+  width: 100%;
+  height: 0.4vw;
+  background: #015e01;
+  outline: none;
+  border-radius: 1vw;
+}
+.header__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1vw;
+  height: 1vw;
+  background: #008000;
+  border-radius: 1vw;
+  border: 2px solid #008000;
+}
+.header__range::-moz-range-thumb {
+  width: 1vw;
+  height: 1vw;
+  border: 2px solid #008000;
 }
 
 #easy.active {
