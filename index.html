@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/css/home.css" />
-
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -26,73 +26,94 @@
 						<div class="header__bar"></div>
 					</div>
 				</div>
-				<div class="header__menu"></div>
+				<div class="header__menu">
+					<div class="header__content">
+						<nav class="nav">
+							<p class="header__text">Навигация по сайту</p>
+							<ul class="nav__list">
+								<li class="nav__item"><a href="learning.html">Пройти обучение</a></li>
+								<li class="nav__item"><a href="choose.html">Выбор языка</a></li>
+								<li class="nav__item"><button onclick="showWindow()">Тренировка</button></li>
+
+							</ul>
+
+							<p class="header__text">Навигация по странице</p>
+
+							<ul class="nav__list">
+								<li class="nav__item"><a href="#learning">Обучение</a></li>
+								<li class="nav__item"><a href="#selection">Выбор языка</a></li>
+								<li class="nav__item"><a href="#example">Важность</a></li>
+								<li class="nav__item"><a href="#additionally">Другие сферы</a></li>
+							</ul>
+						</nav>
+						<p class="header__text-info">Автор: Потапченко Арсений</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
 	<main class="main">
-		<section class="preview">
-			<div class="conteiner">
-				<div class="preview__info">
-					<h1 class="preview__heading">
-						<span class="preview__heading-item animation">Тренировка</span><span
-							class="preview__heading-item animation">быстрой</span><span
-							class="preview__heading-item animation">печати</span>
-					</h1>
-					<button class="preview__button">Начать</button>
-					<div class="preview__window">
-						<button class="preview__cross"></button>
+		<section class="preview" id="preview>
+			<div class=" conteiner">
+			<div class="preview__info">
+				<h1 class="preview__heading">
+					<span class="preview__heading-item animation">Тренировка</span><span
+						class="preview__heading-item animation">быстрой</span><span
+						class="preview__heading-item animation">печати</span>
+				</h1>
+				<button class="preview__button">Начать</button>
+				<div class="preview__window">
+					<button class="preview__cross"></button>
 
-						<p class="preview__window-heading">Выберите язык</p>
-						<div class="preview__cards">
-							<a class="preview__link" href="training.html">
-								<div class="preview__card" id="html-card"
-									onclick="localStorage.setItem('setlanguage', `html`);">
-									<p class="preview__title">HTML</p>
-								</div>
-							</a><a class="preview__link" href="training.html">
-								<div class="preview__card" id="js-card"
-									onclick="localStorage.setItem('setlanguage', `js`);">
-									<p class="preview__title">JavaScript</p>
-								</div>
-							</a><a class="preview__link" href="training.html">
-								<div class="preview__card" id="css-card"
-									onclick="localStorage.setItem('setlanguage', `css`);">
-									<p class="preview__title">CSS</p>
-								</div>
-							</a><a class="preview__link" href="training.html">
-								<div class="preview__card" id="python-card"
-									onclick="localStorage.setItem('setlanguage', `python`);">
-									<p class="preview__title">Python</p>
-								</div>
-							</a><a class="preview__link" href="training.html">
-								<div class="preview__card" id="c-card"
-									onclick="localStorage.setItem('setlanguage', `c`);">
-									<p class="preview__title">C</p>
-								</div>
-							</a><a class="preview__link" href="training.html">
-								<div class="preview__card" id="ch-card"
-									onclick="localStorage.setItem('setlanguage', `ch`);">
-									<p class="preview__title">C#</p>
-								</div>
-							</a><a class="preview__link" href="training.html">
-								<div class="preview__card" id="cpp-card"
-									onclick="localStorage.setItem('setlanguage', `cpp`);">
-									<p class="preview__title">C++</p>
-								</div>
-							</a><a class="preview__link" href="training.html">
-								<div class="preview__card" id="java-card"
-									onclick="localStorage.setItem('setlanguage', `java`);">
-									<p class="preview__title">Java</p>
-								</div>
-							</a>
-						</div>
+					<p class="preview__window-heading">Выберите язык</p>
+					<div class="preview__cards">
+						<a class="preview__link" href="training.html">
+							<div class="preview__card" id="html-card"
+								onclick="localStorage.setItem('setlanguage', `html`);">
+								<p class="preview__title">HTML</p>
+							</div>
+						</a><a class="preview__link" href="training.html">
+							<div class="preview__card" id="js-card"
+								onclick="localStorage.setItem('setlanguage', `js`);">
+								<p class="preview__title">JavaScript</p>
+							</div>
+						</a><a class="preview__link" href="training.html">
+							<div class="preview__card" id="css-card"
+								onclick="localStorage.setItem('setlanguage', `css`);">
+								<p class="preview__title">CSS</p>
+							</div>
+						</a><a class="preview__link" href="training.html">
+							<div class="preview__card" id="python-card"
+								onclick="localStorage.setItem('setlanguage', `python`);">
+								<p class="preview__title">Python</p>
+							</div>
+						</a><a class="preview__link" href="training.html">
+							<div class="preview__card" id="c-card" onclick="localStorage.setItem('setlanguage', `c`);">
+								<p class="preview__title">C</p>
+							</div>
+						</a><a class="preview__link" href="training.html">
+							<div class="preview__card" id="ch-card"
+								onclick="localStorage.setItem('setlanguage', `ch`);">
+								<p class="preview__title">C#</p>
+							</div>
+						</a><a class="preview__link" href="training.html">
+							<div class="preview__card" id="cpp-card"
+								onclick="localStorage.setItem('setlanguage', `cpp`);">
+								<p class="preview__title">C++</p>
+							</div>
+						</a><a class="preview__link" href="training.html">
+							<div class="preview__card" id="java-card"
+								onclick="localStorage.setItem('setlanguage', `java`);">
+								<p class="preview__title">Java</p>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
+			</div>
 		</section>
 
-		<section class="learning">
+		<section class="learning" id="learning">
 			<div class="conteiner">
 
 				<div class="learning__content">
@@ -114,41 +135,18 @@
 					<div class="learning__info">
 						<h2 class="title animate">Пройдите обучение</h2>
 
-						<p class="description animate">Привет, будущий мастер быстрой печати! 🚀👩‍💻 Если ты хочешь
-							улучшить
-							свои
-							навыки печати и стать более продуктивным
-							программистом, вот почему:
-
-							Обучение слепой печати: Ты научишься быстро печатать с использованием всех 10 пальцев. Это
+						<p class="description animate">
+							Данный сайт помагает научиться быстро печатать с использованием всех 10 пальцев. Это
 							ценный
 							навык,
 							который поможет
 							справляться с большим объемом кода без лишних усилий.
-
-							Печать в режиме игры: Забудь о скучных упражнениях! Предлагается учиться печатать в игровом
-							режиме.
-							Зарабатывай монеты,
-							покупай новых героев и учись весело и эффективно.
-
-							Выбор языка: Есть курсы на разных языках программирования: английский, испанский,
-							украинский,
-							русский и
-							даже
-							французский!
-
-							Создание групп и соревнования: Хочешь соревноваться с друзьями или коллегами? Создай группу
-							и
-							узнай,
-							кто
-							из вас быстрее
-							печатает код.
-
-							Для учителей: Если ты преподаватель, можешь научить своих учеников слепой печати. Просто
-							войди в
-							учетную
-							запись,
-							синхронизируй все свои классы и учеников с Google Classroom.</p>
+							<br><br> Есть курсы на разных языках программирования: HTML, CSS, JavaScript, Python, C, C#,
+							C++
+							и Java.<br><br> Вы получаете подробные результаты и можете сравнивать их между собой либо
+							соревноваться с друзьми из вас быстрее печатает код.<br><br>Пройдя обучение вы сможете
+							начать практиковаться правильной печати. В скором времени ваши результаты заметно улучшатся!
+						</p>
 						<a href="learning.html" class="button">Пройти обучение</a>
 					</div>
 				</div>
@@ -212,7 +210,7 @@
 				</article>
 			</div>
 		</section>
-		<section class="example">
+		<section class="example" id="example">
 			<div class="conteiner">
 				<div class="example__content">
 					<img class="example__illustration animate" src="./assets/img/home/main/example/illustration.png"
@@ -260,7 +258,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="additionally">
+		<section class="additionally" id="additionally">
 			<div class="conteiner">
 				<div class="additionally__content">
 					<div class="additionally__info">

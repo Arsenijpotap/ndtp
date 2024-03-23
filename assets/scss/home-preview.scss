@@ -5,7 +5,8 @@
 	background-size: 100%;
 	background-repeat: no-repeat;
 	width: 100vw;
-	height: 100vh;
+	height: 50vw;
+
 	position: relative;
 	&::after {
 		content: "";
@@ -18,7 +19,7 @@
 	}
 
 	&__info {
-		padding: 14vw 0 0 0;
+		padding: 14vw 0 0 3vw;
 	}
 
 	&__heading {
@@ -35,8 +36,12 @@
 		opacity: 0;
 		&.animation {
 			border-right: 0.15em solid $blue;
-			animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-			-webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+			animation:
+				typing 3.5s steps(30, end),
+				blink-caret 0.5s step-end infinite;
+			-webkit-animation:
+				typing 3.5s steps(30, end),
+				blink-caret 0.5s step-end infinite;
 		}
 	}
 	&__heading-item:nth-child(2) {
@@ -217,5 +222,42 @@
 
 	&__title {
 		font-size: 3vw;
+	}
+}
+@media (max-width: 480px) {
+	.preview {
+		background-size: 130%;
+		background-position: right top;
+		height: 100%;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 100vw;
+			height: 60vh;
+			position: absolute;
+			bottom: 0;
+			background-image: linear-gradient(0deg, #000000d7, #00000067);
+		}
+		&__heading-item {
+			margin-bottom: 1vh;
+			opacity: 1;
+
+			&.animation {
+				animation: none;
+			}
+		}
+		&__heading {
+			position: relative;
+			z-index: 100;
+		}
+		&__window {
+			z-index: -1000;
+		}
+		&__button {
+			margin-left: 3vw;
+			font-size: 4vw;
+			scale: 1.4;
+		}
 	}
 }

@@ -36,6 +36,7 @@ let rangeLabel = document.getElementById("rangelabel");
 let resultFirst = document.getElementsByClassName("modal__results")[0];
 let resultList = {};
 let resultSecond = document.getElementsByClassName("modal__results")[1];
+let resetResultButton = document.getElementsByClassName("header__reset-result")[0];
 let rowContent = document.getElementsByClassName("modal__tr")[0].textContent;
 let rows = Array.from(document.getElementsByClassName("keyboard__row"));
 let secondsList = [];
@@ -758,8 +759,14 @@ function setLength() {
 	length = +localStorage.getItem("length");
 	rangeLabel.textContent = length;
 }
+function resetResult() {
+	localStorage.setItem("lastresultslist", JSON.stringify([]));
+	localStorage.setItem("topresultslist", JSON.stringify([]));
+	fillLastTable();
+}
 document.addEventListener("keydown", keydown);
 button.addEventListener("click", closeModal);
+resetResultButton.addEventListener("click", resetResult);
 moreInfoButton.addEventListener("click", showMoreInfo);
 Array.from(document.getElementsByTagName("section")).forEach((section) => {
 	section.addEventListener("click", closeModal);

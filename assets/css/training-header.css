@@ -276,6 +276,17 @@ body.active {
 .header__reset-button:hover {
   opacity: 1;
 }
+.header__reset-result {
+  position: absolute;
+  bottom: 2vw;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header__reset-result:hover {
+  color: #ff0000;
+  opacity: 0.7;
+}
 .header__input {
   display: none;
 }

@@ -281,8 +281,9 @@ body.active {
   right: -36vw;
   position: absolute;
   top: -10vh;
-  width: 30vw;
+  width: 28vw;
   height: 210vh;
+  opacity: 0.9;
   background-color: #171717;
   transition: 0.8s;
   -webkit-transition: 0.8s;
@@ -296,6 +297,55 @@ body.active {
   -moz-transform: translate(-30vw, 0);
   -ms-transform: translate(-30vw, 0);
   -o-transform: translate(-30vw, 0);
+}
+.header__content {
+  position: absolute;
+  top: 10%;
+  left: 4vw;
+}
+.header__text {
+  font-size: 1.6vw;
+  font-weight: 600;
+}
+.header__text-info {
+  position: absolute;
+  bottom: -30vh;
+  font-size: 1vw;
+}
+
+.nav__list {
+  color: #ffffff;
+  margin-bottom: 2vw;
+  margin-left: 2vw;
+}
+.nav__item {
+  margin-top: 0.3vw;
+}
+.nav__item a,
+.nav button {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.4vw;
+}
+.nav__item a::after,
+.nav button::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 0.1vw;
+  background: #ffffff;
+}
+.nav__item a:hover::after,
+.nav button:hover::after {
+  width: 100%;
+}
+.nav__item button::after {
+  height: 0.15vw;
 }
 
 #python-card {
@@ -330,6 +380,40 @@ body.active {
   background-color: #27ae60;
 }
 
+@media (max-width: 480px) {
+  .header__icon {
+    width: 10vw;
+    height: 10vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .header__name {
+    color: #ffffff;
+    font-size: 3.5vw;
+  }
+  .header__opener-text {
+    font-size: 3vw;
+  }
+  .header__burger {
+    scale: 1.7;
+  }
+  .header__menu {
+    width: 45vw;
+    right: -53vw;
+  }
+  .header__menu.active {
+    -webkit-transform: translate(-46vw);
+        -ms-transform: translate(-46vw);
+            transform: translate(-46vw);
+  }
+  .header__content {
+    margin-left: 7vw;
+    scale: 1.6;
+  }
+  .header__opener {
+    gap: 3vw;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -460,7 +544,7 @@ body.active {
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  height: 50vw;
   position: relative;
   /* The typing effect */
   /* The typewriter cursor effect */
@@ -476,7 +560,7 @@ body.active {
   background-image: linear-gradient(0deg, #06050a, rgba(0, 0, 0, 0));
 }
 .preview__info {
-  padding: 14vw 0 0 0;
+  padding: 14vw 0 0 3vw;
 }
 .preview__heading {
   line-height: 100%;
@@ -694,6 +778,43 @@ body.active {
   font-size: 3vw;
 }
 
+@media (max-width: 480px) {
+  .preview {
+    background-size: 130%;
+    background-position: right top;
+    height: 100%;
+  }
+  .preview::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    bottom: 0;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8431372549)), to(rgba(0, 0, 0, 0.4039215686)));
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8431372549), rgba(0, 0, 0, 0.4039215686));
+  }
+  .preview__heading-item {
+    margin-bottom: 1vh;
+    opacity: 1;
+  }
+  .preview__heading-item.animation {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .preview__heading {
+    position: relative;
+    z-index: 100;
+  }
+  .preview__window {
+    z-index: -1000;
+  }
+  .preview__button {
+    margin-left: 3vw;
+    font-size: 4vw;
+    scale: 1.4;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -1339,18 +1460,6 @@ body.active {
   height: 405px;
 }
 
-@media (max-width: 720px) {
-  #css-laptop {
-    padding: 0;
-    margin-top: -60px;
-    margin-bottom: 20px;
-  }
-  .laptop {
-    -webkit-transform: scale(0.57);
-    -ms-transform: scale(0.57);
-        transform: scale(0.57);
-  }
-}
 .laptop * {
   position: absolute;
 }
@@ -1482,7 +1591,7 @@ body.active {
 
 .learning {
   position: relative;
-  margin: 10vw 0 10vw 0;
+  padding: 10vw 0 10vw 0;
 }
 .learning::before {
   z-index: -1;
@@ -1633,7 +1742,7 @@ body.active {
 
 .example {
   position: relative;
-  margin: 10vw 0 20vw 0;
+  padding: 10vw 0 10vw 0;
 }
 .example__illustration {
   width: 40vw;
@@ -1821,7 +1930,7 @@ body.active {
 
 .additionally {
   position: relative;
-  margin: 10vw 0 20vw 0;
+  padding: 10vw 0 10vw 0;
 }
 .additionally__illustration {
   width: 45vw;

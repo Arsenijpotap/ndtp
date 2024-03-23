@@ -275,8 +275,9 @@ body.active {
   right: -36vw;
   position: absolute;
   top: -10vh;
-  width: 30vw;
+  width: 28vw;
   height: 210vh;
+  opacity: 0.9;
   background-color: #171717;
   transition: 0.8s;
   -webkit-transition: 0.8s;
@@ -290,6 +291,55 @@ body.active {
   -moz-transform: translate(-30vw, 0);
   -ms-transform: translate(-30vw, 0);
   -o-transform: translate(-30vw, 0);
+}
+.header__content {
+  position: absolute;
+  top: 10%;
+  left: 4vw;
+}
+.header__text {
+  font-size: 1.6vw;
+  font-weight: 600;
+}
+.header__text-info {
+  position: absolute;
+  bottom: -30vh;
+  font-size: 1vw;
+}
+
+.nav__list {
+  color: #ffffff;
+  margin-bottom: 2vw;
+  margin-left: 2vw;
+}
+.nav__item {
+  margin-top: 0.3vw;
+}
+.nav__item a,
+.nav button {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.4vw;
+}
+.nav__item a::after,
+.nav button::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 0.1vw;
+  background: #ffffff;
+}
+.nav__item a:hover::after,
+.nav button:hover::after {
+  width: 100%;
+}
+.nav__item button::after {
+  height: 0.15vw;
 }
 
 #python-card {
@@ -322,4 +372,39 @@ body.active {
 
 #css-card {
   background-color: #27ae60;
+}
+
+@media (max-width: 480px) {
+  .header__icon {
+    width: 10vw;
+    height: 10vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .header__name {
+    color: #ffffff;
+    font-size: 3.5vw;
+  }
+  .header__opener-text {
+    font-size: 3vw;
+  }
+  .header__burger {
+    scale: 1.7;
+  }
+  .header__menu {
+    width: 45vw;
+    right: -53vw;
+  }
+  .header__menu.active {
+    -webkit-transform: translate(-46vw);
+        -ms-transform: translate(-46vw);
+            transform: translate(-46vw);
+  }
+  .header__content {
+    margin-left: 7vw;
+    scale: 1.6;
+  }
+  .header__opener {
+    gap: 3vw;
+  }
 }

@@ -131,18 +131,6 @@ body.active {
   height: 405px;
 }
 
-@media (max-width: 720px) {
-  #css-laptop {
-    padding: 0;
-    margin-top: -60px;
-    margin-bottom: 20px;
-  }
-  .laptop {
-    -webkit-transform: scale(0.57);
-    -ms-transform: scale(0.57);
-        transform: scale(0.57);
-  }
-}
 .laptop * {
   position: absolute;
 }
@@ -274,7 +262,7 @@ body.active {
 
 .learning {
   position: relative;
-  margin: 10vw 0 10vw 0;
+  padding: 10vw 0 10vw 0;
 }
 .learning::before {
   z-index: -1;

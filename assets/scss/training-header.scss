@@ -172,6 +172,16 @@
 			opacity: 1;
 		}
 	}
+	&__reset-result {
+		position: absolute;
+		bottom: 2vw;
+		opacity: 0.5;
+		transition: 0.5s;
+		&:hover {
+			color: $hint;
+			opacity: 0.7;
+		}
+	}
 	&__input {
 		display: none;
 	}

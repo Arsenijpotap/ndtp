@@ -11,14 +11,13 @@ let key = document.getElementsByClassName("keyboard__key_size-one")[0];
 if (!localStorage.getItem("mode")) {
 	localStorage.setItem("mode", "easy");
 }
+letterColor.value == localStorage.getItem("letterColor") ?? "#ff0000";
+corectColor.value = localStorage.getItem("corectColor") ?? "#008000";
+unCorectColor.value = localStorage.getItem("unCorectColor") ?? "#ff0000";
 
 document.documentElement.style.setProperty("--hint-color", localStorage.getItem("unCorectColor"));
 document.documentElement.style.setProperty("--active-color", localStorage.getItem("corectColor"));
 document.getElementById("textfield-active").style.color = localStorage.getItem("letterColor");
-
-letterColor.value == localStorage.getItem("letterColor") ?? "#ff0000";
-corectColor.value = localStorage.getItem("corectColor") ?? "#008000";
-unCorectColor.value = localStorage.getItem("unCorectColor") ?? "#ff0000";
 
 setMode(localStorage.getItem("mode"));
 buttons.forEach((element) => {

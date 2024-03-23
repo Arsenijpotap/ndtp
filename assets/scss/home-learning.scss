@@ -8,18 +8,7 @@
     width: 584px;
     height: 405px;
 }
-
-@media (max-width: 720px) {
-    #css-laptop {
-        padding: 0;
-        margin-top: -60px;
-        margin-bottom: 20px;
-    }
-
-    .laptop {
-        -webkit-transform: scale(0.57);
-        transform: scale(0.57);
-    }
+@media (max-width: 480px) {
 }
 
 .laptop * {
@@ -173,7 +162,7 @@
         height: 100%;
         background-image: linear-gradient(0deg, #00000000, rgb(43, 42, 42), #00000000);
     }
-    margin: 10vw 0 10vw 0;
+    padding: 10vw 0 10vw 0;
 
     &__content {
         width: 100%;

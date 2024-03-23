@@ -126,7 +126,7 @@ body.active {
 
 .additionally {
   position: relative;
-  margin: 10vw 0 20vw 0;
+  padding: 10vw 0 10vw 0;
 }
 .additionally__illustration {
   width: 45vw;

@@ -74,11 +74,21 @@
 		-moz-border-radius: 0.2vw;
 		-ms-border-radius: 0.2vw;
 		-o-border-radius: 0.2vw;
-		transition: width 0.6s, transform 0.6s;
-		-webkit-transition: width 0.6s, transform 0.6s;
-		-moz-transition: width 0.6s, transform 0.6s;
-		-ms-transition: width 0.6s, transform 0.6s;
-		-o-transition: width 0.6s, transform 0.6s;
+		transition:
+			width 0.6s,
+			transform 0.6s;
+		-webkit-transition:
+			width 0.6s,
+			transform 0.6s;
+		-moz-transition:
+			width 0.6s,
+			transform 0.6s;
+		-ms-transition:
+			width 0.6s,
+			transform 0.6s;
+		-o-transition:
+			width 0.6s,
+			transform 0.6s;
 		&:first-child {
 			width: 3vw;
 		}
@@ -88,12 +98,23 @@
 	}
 
 	&__burger.active .header__bar {
-		transition: width 0.3s, transform 0.6s;
-		-webkit-transition: width 0.3s, transform 0.6s;
-		-moz-transition: width 0.3s, transform 0.6s;
-		-ms-transition: width 0.3s, transform 0.6s;
-		-o-transition: width 0.3s, transform 0.6s;
+		transition:
+			width 0.3s,
+			transform 0.6s;
+		-webkit-transition:
+			width 0.3s,
+			transform 0.6s;
+		-moz-transition:
+			width 0.3s,
+			transform 0.6s;
+		-ms-transition:
+			width 0.3s,
+			transform 0.6s;
+		-o-transition:
+			width 0.3s,
+			transform 0.6s;
 		width: 0;
+
 		&:first-child {
 			transform: translate(1vw, 0.9vw) rotateZ(-45deg);
 			width: 4.24vw;
@@ -117,21 +138,72 @@
 		right: -36vw;
 		position: absolute;
 		top: -10vh;
-		width: 30vw;
+		width: 28vw;
 		height: 210vh;
+		opacity: 0.9;
 		background-color: $background-grey;
 		transition: 0.8s;
 		-webkit-transition: 0.8s;
 		-moz-transition: 0.8s;
 		-ms-transition: 0.8s;
 		-o-transition: 0.8s;
+
+		&.active {
+			transform: translate(-30vw, 0);
+			-webkit-transform: translate(-30vw, 0);
+			-moz-transform: translate(-30vw, 0);
+			-ms-transform: translate(-30vw, 0);
+			-o-transform: translate(-30vw, 0);
+		}
 	}
-	&__menu.active {
-		transform: translate(-30vw, 0);
-		-webkit-transform: translate(-30vw, 0);
-		-moz-transform: translate(-30vw, 0);
-		-ms-transform: translate(-30vw, 0);
-		-o-transform: translate(-30vw, 0);
+
+	&__content {
+		position: absolute;
+		top: 10%;
+		left: 4vw;
+	}
+	&__text {
+		font-size: 1.6vw;
+		font-weight: 600;
+	}
+	&__text-info {
+		position: absolute;
+		bottom: -30vh;
+		font-size: 1vw;
+	}
+}
+.nav {
+	&__list {
+		color: $light;
+		margin-bottom: 2vw;
+		margin-left: 2vw;
+	}
+	&__item {
+		margin-top: 0.3vw;
+	}
+	&__item a,
+	button {
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 0;
+			display: block;
+			width: 0;
+			transition: 0.3s;
+			height: 0.1vw;
+			background: $light;
+		}
+		&:hover::after {
+			width: 100%;
+		}
+
+		color: $light;
+		font-size: 1.4vw;
+	}
+	&__item button::after {
+		height: 0.15vw;
 	}
 }
 #python-card {
@@ -158,4 +230,40 @@
 
 #css-card {
 	background-color: #27ae60;
+}
+
+@media (max-width: 480px) {
+	.header {
+		&__icon {
+			width: 10vw;
+			height: 10vw;
+			object-fit: cover;
+		}
+
+		&__name {
+			color: $light;
+
+			font-size: 3.5vw;
+		}
+		&__opener-text {
+			font-size: 3vw;
+		}
+		&__burger {
+			scale: (1.7);
+		}
+		&__menu {
+			width: 45vw;
+			right: -53vw;
+			&.active {
+				transform: translate(-46vw);
+			}
+		}
+		&__content {
+			margin-left: 7vw;
+			scale: (1.6);
+		}
+		&__opener {
+			gap: 3vw;
+		}
+	}
 }
