@@ -392,6 +392,7 @@ body.active {
             animation: none;
   }
   .preview__heading {
+    border: none;
     position: relative;
     z-index: 10;
   }

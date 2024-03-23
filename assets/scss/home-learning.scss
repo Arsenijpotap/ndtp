@@ -40,7 +40,7 @@
     border-radius: 20px;
     background: linear-gradient(45deg, #e5ebf2, #f3f8fb);
     transform-origin: bottom;
-    z-index: 100;
+    z-index: 10;
     transform: perspective(880px) rotateX(-150deg);
     height: 200px;
     margin-top: 195px;
@@ -70,7 +70,7 @@
     margin-top: -10px;
 
     width: 100%;
-    z-index: 100;
+    z-index: 10;
     transition: 2s;
     background: -webkit-linear-gradient(45deg, #e5ebf2, #f3f8fb);
     background: linear-gradient(45deg, #e5ebf2, #f3f8fb);

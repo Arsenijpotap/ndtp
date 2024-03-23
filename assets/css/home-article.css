@@ -215,5 +215,9 @@ body.active {
   }
   .chapter__illustration {
     left: 19%;
+    pointer-events: none;
+  }
+  .chapter .button {
+    display: none;
   }
 }

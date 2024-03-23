@@ -533,6 +533,7 @@ function showChart() {
 	// 	chart.destroy();
 	// }, 4000);
 }
+
 function closeModal() {
 	if (modalIsOpen) {
 		moreInfo.style.opacity = "0";
@@ -574,7 +575,7 @@ function openModal() {
 
 function showMoreInfo() {
 	moreInfo.style.display = "flex";
-	maxSpeed = correctSpeedsList.sort()[correctSpeedsList.length - 1];
+	maxSpeed = [...correctSpeedsList].sort()[correctSpeedsList.length - 1];
 	modal.style.height = "77vh";
 	resultFirst.style.opacity = "0";
 	resultSecond.style.opacity = "0";

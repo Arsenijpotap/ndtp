@@ -155,7 +155,7 @@ body.active {
   -webkit-transform-origin: bottom;
       -ms-transform-origin: bottom;
           transform-origin: bottom;
-  z-index: 100;
+  z-index: 10;
   -webkit-transform: perspective(880px) rotateX(-150deg);
           transform: perspective(880px) rotateX(-150deg);
   height: 200px;
@@ -176,7 +176,7 @@ body.active {
           backface-visibility: hidden;
   margin-top: -10px;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
   -webkit-transition: 2s;
   transition: 2s;
   background: linear-gradient(45deg, #e5ebf2, #f3f8fb);
