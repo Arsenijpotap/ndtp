@@ -61,6 +61,11 @@
 }
 @media (max-width: 480px) {
 	.example {
+		&__info {
+			margin-top: 5vh;
+			margin-left: 13vw;
+			scale: 1.4;
+		}
 		&__content {
 			flex-direction: column;
 		}
@@ -68,6 +73,7 @@
 			margin-bottom: 3vh;
 		}
 		&__list {
+			font-size: 5vw;
 			margin-left: 15%;
 		}
 	}

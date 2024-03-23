@@ -393,7 +393,7 @@ body.active {
   }
   .preview__heading {
     position: relative;
-    z-index: 100;
+    z-index: 10;
   }
   .preview__window {
     z-index: -1000;

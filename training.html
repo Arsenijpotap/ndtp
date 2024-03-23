@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="assets/css/training.css" />
+	<link rel="stylesheet" href="assets/css/training.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 		<div class="conteiner">
 			<div class="header__info">
 				<a href="#" class="header__logo">
-					<img src="./assets/icons/logo/logo.png" alt="logo FastFingers" class="header__icon" />
+					<img src="./assets/icons/logo/logo.png" alt="logo CodeType" class="header__icon">
 					<p class="header__name">CodeType</p>
 				</a>
 				<img alt="" src="./assets/icons/training/header/settings.png" class="header__settings-icon">
@@ -25,13 +25,13 @@
 						<button class="header__mode-button" id="hard">режим 3</button>
 					</div>
 					<p class="header__title">Настройки цветов:</p>
-					<form class="header__form" action>
+					<form class="header__form">
 						<label class="header__text">Цвет подсказки: <input type="color" value="#008000"
-								id="corectcolor" /></label>
+								id="corectcolor"></label>
 						<label class=" header__text">Цвет ошибки: <input type="color" value="#ff0000"
-								id="uncorectcolor" /></label>
+								id="uncorectcolor"></label>
 						<label class=" header__text">Цвет первой буквы: <input type="color" value="#ff0000"
-								id="lettercolor" /></label>
+								id="lettercolor"></label>
 						<button class="header__reset-button" type="reset">Сбросить</button>
 					</form>
 					<div class="header__setting-section">
@@ -42,7 +42,7 @@
 					</div>
 					<div class="header__setting-section">
 						<p class="header__text">Количество терминов: </p>
-						<input type="range" class="header__range" id="range" name="range" min="5" max="20" />
+						<input type="range" class="header__range" id="range" name="range" min="5" max="20">
 						<label id="rangelabel" class="header__label-range" for="range"></label>
 					</div>
 					<button class="header__reset-result">Сбросить результаты</button>
@@ -59,10 +59,13 @@
 				<div class="modal__additionally-info">
 					<div class="modal__past-results">
 						<table class="modal__table">
-							<th class="modal__tr-title" colspan="5">
-								Последние результаты
+							<tr>
+								<th class="modal__tr-title" colspan="5">
 
-							</th>
+									Последние результаты
+
+								</th>
+							</tr>
 							<tr class="modal__tr-title">
 								<th>Язык</th>
 								<th>Время</th>
@@ -105,12 +108,13 @@
 								<td class="modal__speed">н/с.</td>
 								<td>сим.</td>
 							</tr>
+							<tr>
+								<th class="modal__tr-title" colspan="5">
+									Топ результатов
 
 
-							<th class="modal__tr-title" colspan="5">
-								Топ результатов
-
-							</th>
+								</th>
+							</tr>
 							<tr class="modal__tr-top">
 
 								<td></td>
@@ -157,6 +161,7 @@
 				</div>
 			</div>
 			<section class="textfield">
+				<h2 hidden>Текстовое поле</h2>
 				<p class="textfield__description" id="description">Нажмите Enter чтобы начать</p>
 
 				<p class="textfield__text">
@@ -166,6 +171,8 @@
 			</section>
 
 			<section class="keyboard" id="keyboard">
+				<h2 hidden>Клавиатура</h2>
+
 				<div class="keyboard__back-plate">
 					<div class="keyboard__row">
 						<div class="keyboard__key_size-one" id="esc" data-sign="esc" data-value="~">
@@ -357,7 +364,7 @@
 							<p class="keyboard__value">Fn</p>
 						</div>
 						<div class="keyboard__key_size-one" id="win">
-							<div class="keyboard__value">∎∎<br />∎∎</div>
+							<div class="keyboard__value">∎∎<br>∎∎</div>
 						</div>
 						<div class="keyboard__key_size-one" id="alt-l" data-sign="Alt">
 							<p class="keyboard__value">Alt</p>

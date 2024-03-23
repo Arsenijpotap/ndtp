@@ -233,6 +233,15 @@
 }
 
 @media (max-width: 480px) {
+	section {
+		scale: 1.4;
+		margin: 30vw 0;
+	}
+	.preview {
+		scale: 1;
+
+		margin: 0 0;
+	}
 	.header {
 		&__icon {
 			width: 10vw;
@@ -251,6 +260,7 @@
 		&__burger {
 			scale: (1.7);
 		}
+		z-index: 20;
 		&__menu {
 			width: 45vw;
 			right: -53vw;

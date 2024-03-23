@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="assets/css/home.css" />
+	<link rel="stylesheet" href="assets/css/home.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 		<div class="conteiner">
 			<div class="header__info">
 				<a href="#" class="header__logo">
-					<img src="./assets/icons/logo/logo.png" alt="logo FastFingers" class="header__icon" />
+					<img src="./assets/icons/logo/logo.png" alt="logo CodeType" class="header__icon">
 					<p class="header__name">CodeType</p>
 				</a>
 				<div class="header__opener">
@@ -27,7 +27,9 @@
 					</div>
 				</div>
 				<div class="header__menu">
-					<div class="header__content">
+					<article class="header__content">
+						<h2 hidden>Навигация</h2>
+
 						<nav class="nav">
 							<p class="header__text">Навигация по сайту</p>
 							<ul class="nav__list">
@@ -47,15 +49,17 @@
 							</ul>
 						</nav>
 						<p class="header__text-info">Автор: Потапченко Арсений</p>
-					</div>
+					</article>
 				</div>
 			</div>
 		</div>
 	</header>
 	<main class="main">
 		<section class="preview" id="preview">
+			<h2 hidden>Превью</h2>
+
 			<div class="conteiner">
-				<div class="preview__info">
+				<article class="preview__info">
 					<h1 class="preview__heading">
 						<span class="preview__heading-item animation">Тренировка</span><span
 							class="preview__heading-item animation">быстрой</span><span
@@ -63,7 +67,7 @@
 					</h1>
 					<button class="preview__button">Начать</button>
 					<div class="preview__window">
-						<button class="preview__cross"></button>
+						<button aria-label="Закрыть окно" class="preview__cross"></button>
 
 						<p class="preview__window-heading">Выберите язык</p>
 						<div class="preview__cards">
@@ -110,14 +114,16 @@
 							</a>
 						</div>
 					</div>
-				</div>
+				</article>
 			</div>
 		</section>
 
 		<section class="learning" id="learning">
+			<h2 hidden>Обучение</h2>
+
 			<div class="conteiner">
 
-				<div class="learning__content">
+				<article class="learning__content">
 					<div class="laptop">
 
 						<div class="top animate"></div>
@@ -150,10 +156,12 @@
 						</p>
 						<a href="learning.html" class="button">Пройти обучение</a>
 					</div>
-				</div>
+				</article>
 			</div>
 		</section>
 		<section class="selection" id="selection">
+			<h2 hidden>Выбор языка программирования</h2>
+
 			<div class="conteiner">
 				<article class="chapter">
 					<div class="chapter__info">
@@ -173,30 +181,31 @@
 							язык</a>
 					</div>
 					<div class="chapter__illustration animate">
-						<a onclick="localStorage.setItem('setlanguage', 'c');" href="choose.html"
+						<a aria-label="перейти на страницу выбора языка"
+							onclick="localStorage.setItem('setlanguage', 'c');" href="choose.html"
 							class="chapter__language" id="c"><img src="./assets/img/home/main/selection/c.png" alt
-								class="chapter__image" /></a>
-						<a href="choose.html" class="chapter__language" id="cpp"
-							onclick="localStorage.setItem('setlanguage', `cpp`);"><img
-								src="./assets/img/home/main/selection/cpp.png" alt class="chapter__image" /></a>
-						<a href="choose.html" class="chapter__language" id="html"
-							onclick="localStorage.setItem('setlanguage', `html`);"><img
-								src="./assets/img/home/main/selection/html.png" alt class="chapter__image" /></a>
-						<a href="choose.html" class="chapter__language" id="python"
-							onclick="localStorage.setItem('setlanguage', `python`);"><img
-								src="./assets/img/home/main/selection/python.png" alt class="chapter__image" /></a>
-						<a href="choose.html" class="chapter__language" id="java"
-							onclick="localStorage.setItem('setlanguage', `java`);"><img
-								src="./assets/img/home/main/selection/java.png" alt class="chapter__image" /></a>
-						<a href="choose.html" class="chapter__language" id="js"
-							onclick="localStorage.setItem('setlanguage', `js`);"><img
-								src="./assets/img/home/main/selection/js.png" alt class="chapter__image" /></a>
-						<a href="choose.html" class="chapter__language" id="css"
-							onclick="localStorage.setItem('setlanguage', `css`);"><img
-								src="./assets/img/home/main/selection/css.png" alt class="chapter__image" /></a>
-						<a href="choose.html" class="chapter__language" id="ch"
-							onclick="localStorage.setItem('setlanguage', `ch`);"><img
-								src="./assets/img/home/main/selection/ch.png" alt class="chapter__image" /></a>
+								class="chapter__image"></a>
+						<a aria-label="перейти на страницу выбора языка" href="choose.html" class="chapter__language"
+							id="cpp" onclick="localStorage.setItem('setlanguage', `cpp`);"><img
+								src="./assets/img/home/main/selection/cpp.png" alt class="chapter__image"></a>
+						<a aria-label="перейти на страницу выбора языка" href="choose.html" class="chapter__language"
+							id="html" onclick="localStorage.setItem('setlanguage', `html`);"><img
+								src="./assets/img/home/main/selection/html.png" alt class="chapter__image"></a>
+						<a aria-label="перейти на страницу выбора языка" href="choose.html" class="chapter__language"
+							id="python" onclick="localStorage.setItem('setlanguage', `python`);"><img
+								src="./assets/img/home/main/selection/python.png" alt class="chapter__image"></a>
+						<a aria-label="перейти на страницу выбора языка" href="choose.html" class="chapter__language"
+							id="java" onclick="localStorage.setItem('setlanguage', `java`);"><img
+								src="./assets/img/home/main/selection/java.png" alt class="chapter__image"></a>
+						<a aria-label="перейти на страницу выбора языка" href="choose.html" class="chapter__language"
+							id="js" onclick="localStorage.setItem('setlanguage', `js`);"><img
+								src="./assets/img/home/main/selection/js.png" alt class="chapter__image"></a>
+						<a aria-label="перейти на страницу выбора языка" href="choose.html" class="chapter__language"
+							id="css" onclick="localStorage.setItem('setlanguage', `css`);"><img
+								src="./assets/img/home/main/selection/css.png" alt class="chapter__image"></a>
+						<a aria-label="перейти на страницу выбора языка" href="choose.html" class="chapter__language"
+							id="ch" onclick="localStorage.setItem('setlanguage', `ch`);"><img
+								src="./assets/img/home/main/selection/ch.png" alt class="chapter__image"></a>
 						<div class="chapter__timeline">
 							<p class="chapter__timeline-item"></p>
 							<p class="chapter__timeline-item">1972</p>
@@ -212,8 +221,10 @@
 			</div>
 		</section>
 		<section class="example" id="example">
+			<h2 hidden>Примеры</h2>
+
 			<div class="conteiner">
-				<div class="example__content">
+				<article class="example__content">
 					<img class="example__illustration animate" src="./assets/img/home/main/example/illustration.png"
 						alt="">
 					<div class="example__info">
@@ -256,12 +267,14 @@
 
 						</ul>
 					</div>
-				</div>
+				</article>
 			</div>
 		</section>
 		<section class="additionally" id="additionally">
+			<h2 hidden>Другие сферы деятельности</h2>
+
 			<div class="conteiner">
-				<div class="additionally__content">
+				<article class="additionally__content">
 					<div class="additionally__info">
 						<h2 class="title animate">Быстрая печать важна для
 							других сфер деятельности</h2>
@@ -301,13 +314,12 @@
 
 						</ul>
 					</div>
-					<img class="additionally__illustration animate"
+					<img alt="иллюстрация компьютер" class="additionally__illustration animate"
 						src="./assets/img/home/main/additionally/areas-of-work.png">
-				</div>
+				</article>
 			</div>
 		</section>
 	</main>
-	<footer class="footer"></footer>
 
 	<!-- <script src="assets/js/test.js"></script> -->
 	<!-- <script src="assets/js/.js"></script> -->

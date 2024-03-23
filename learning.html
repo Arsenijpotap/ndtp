@@ -15,15 +15,17 @@
         <div class="conteiner">
             <div class="header__info">
                 <a href="#" class="header__logo">
-                    <img src="./assets/icons/logo/logo.png" alt="logo FastFingers" class="header__icon">
+                    <img src="./assets/icons/logo/logo.png" alt="logo CodeType" class="header__icon">
                     <p class="header__name">
                         CodeType
                     </p>
                 </a>
             </div>
+        </div>
     </header>
     <main>
         <section class="keyboard" id="keyboard">
+            <h2 hidden>Клавиатура</h2>
 
             <div class="keyboard__back-plate">
                 <div class="keyboard__row">
@@ -251,17 +253,24 @@
             </div>
         </section>
         <section class="hints">
+            <h2 hidden>Подсказки</h2>
+
             <p class="hints__text" id="firsthint"></p>
             <p class="hints__text" id="secondhint"></p>
             <p class="hints__text" id="thirdhint"></p>
             <p class="hints__text" id="fourthhint"></p>
-            <img src="./assets/img/learning/hands/hands.png" alt class="hints__image" id="hands-colorful">
-            <img src="./assets/img/learning/hands/hands-empty.png" alt class="hints__image" id="hands-empty">
-            <img src="./assets/img/learning/hands/hands-empty-left.png" alt class="hints__image" id="hands-empty-left">
-            <img src="./assets/img/learning/hands/hands-empty-right.png" alt class="hints__image"
-                id="hands-empty-right">
+            <img src="./assets/img/learning/hands/hands.png" alt="изображение рук" class="hints__image"
+                id="hands-colorful">
+            <img src="./assets/img/learning/hands/hands-empty.png" alt="изображение рук" class="hints__image"
+                id="hands-empty">
+            <img src="./assets/img/learning/hands/hands-empty-left.png" alt="изображение левой руки"
+                class="hints__image" id="hands-empty-left">
+            <img src="./assets/img/learning/hands/hands-empty-right.png" alt="изображение правой руки"
+                class="hints__image" id="hands-empty-right">
         </section>
         <section class="buttons" id="buttonsrow">
+            <h2 hidden>Кнопки</h2>
+
             <button class="buttons__button" id="back">Назад</button>
             <button class="buttons__button"
                 onclick="if(!isAnimationWork){surrentStep++;showStep();isAnimationWork = true;}"

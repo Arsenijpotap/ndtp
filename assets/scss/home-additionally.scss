@@ -59,7 +59,9 @@
 }
 @media (max-width: 480px) {
     .additionally {
+        padding: 10vw 0 0 0;
         &__content {
+            width: 100%;
             flex-direction: column-reverse;
         }
         &__illustration {
@@ -67,6 +69,13 @@
         }
         &__list {
             margin-left: 25%;
+        }
+        &__info {
+            margin-left: 8vw;
+            scale: 1.4;
+        }
+        & .title {
+            width: 90vw;
         }
     }
 }

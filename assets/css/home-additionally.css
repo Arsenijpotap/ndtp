@@ -187,7 +187,11 @@ body.active {
 }
 
 @media (max-width: 480px) {
+  .additionally {
+    padding: 10vw 0 0 0;
+  }
   .additionally__content {
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -198,5 +202,12 @@ body.active {
   }
   .additionally__list {
     margin-left: 25%;
+  }
+  .additionally__info {
+    margin-left: 8vw;
+    scale: 1.4;
+  }
+  .additionally .title {
+    width: 90vw;
   }
 }

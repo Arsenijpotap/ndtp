@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
         <section class="choice">
             <div class="conteiner">
                 <h2 class="choice__heading">Выберите подходящий язык</h2>
-                <a href="index.html#selection" class="choice__cross"></a>
+                <a aria-label="Закрыть" href="index.html#selection" class="choice__cross"></a>
                 <div class="choice__logo-list"><img src="./assets/icons/choose/html.png" alt data-name="html"
                         class="choice__logo-item">
                     <img src="./assets/icons/choose/js.png" alt data-name="js" class="choice__logo-item"><img
@@ -27,7 +27,7 @@
                 </div>
                 <div class="choice__slides">
                     <article class="choice__slide" id="html">
-                        <p class="choice__name">HTML</p>
+                        <h2 class="choice__name">HTML</h2>
                         <div class="choice__about">
                             <div class="choice__info">
 
@@ -110,7 +110,7 @@
                         </div>
                     </article>
                     <article class="choice__slide" id='js'>
-                        <p class="choice__name">JavaScript</p>
+                        <h2 class="choice__name">JavaScript</h2>
                         <div class="choice__about">
                             <div class="choice__info">
 
@@ -170,7 +170,7 @@
                         </div>
                     </article>
                     <article class="choice__slide" id="css">
-                        <p class="choice__name">CSS</p>
+                        <h2 class="choice__name">CSS</h2>
                         <div class="choice__about">
                             <div class="choice__info">
 
@@ -237,7 +237,7 @@
                         </div>
                     </article>
                     <article class="choice__slide" id="python">
-                        <p class="choice__name">Python</p>
+                        <h2 class="choice__name">Python</h2>
                         <div class="choice__about">
                             <div class="choice__info">
 
@@ -290,7 +290,7 @@
                         </div>
                     </article>
                     <article class="choice__slide" id="c">
-                        <p class="choice__name">C</p>
+                        <h2 class="choice__name">C</h2>
                         <div class="choice__about">
                             <div class="choice__info">
 
@@ -351,7 +351,7 @@
                         </div>
                     </article>
                     <article class="choice__slide" id="ch">
-                        <p class="choice__name">C#</p>
+                        <h2 class="choice__name">C#</h2>
                         <div class="choice__about">
                             <div class="choice__info">
 
@@ -405,7 +405,7 @@
                         </div>
                     </article>
                     <article class="choice__slide" id="cpp">
-                        <p class="choice__name">C++</p>
+                        <h2 class="choice__name">C++</h2>
                         <div class="choice__about">
                             <div class="choice__info">
 
@@ -467,7 +467,7 @@
                         </div>
                     </article>
                     <article class="choice__slide" id="java">
-                        <p class="choice__name">Java</p>
+                        <h2 class="choice__name">Java</h2>
                         <div class="choice__about">
                             <div class="choice__info">
 
@@ -509,26 +509,26 @@
                                     облачные приложения и многое другое.
                                 </p>
                             </div>
-                            <div class="choice__example">
-                                <figure class="choice__image"><img src="./assets/img/choose/examplejava.jpg" alt>
-                                    <figcaption class="choice__signature">
-                                        <p>Пример
-                                            приложения, созданного при
-                                            помощи
-                                            Java</p>
-                                    </figcaption>
-                                </figure>
-
-                            </div>
                         </div>
+                        <div class="choice__example">
+                            <figure class="choice__image"><img src="./assets/img/choose/examplejava.jpg" alt>
+                                <figcaption class="choice__signature">
+                                    <p>Пример
+                                        приложения, созданного при
+                                        помощи
+                                        Java</p>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                    </article>
                 </div>
-                </article>
                 <div class="choice__buttons">
-                    <button class="choice__button" id="back-button">
-                        < Назад</button>
-                            <a href="training.html" class="choice__button" id="start-button">Начать
-                                тренировку</a>
-                            <button class="choice__button" id="next-button">Вперед ></button>
+                    <button aria-label="вернуться назад" class="choice__button" id="back-button">
+                        Назад</button>
+                    <a href="training.html" class="choice__button" id="start-button">Начать
+                        тренировку</a>
+                    <button class="choice__button" id="next-button">Вперед ></button>
                 </div>
             </div>
         </section>
