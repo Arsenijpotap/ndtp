@@ -57,3 +57,16 @@
         }
     }
 }
+@media (max-width: 480px) {
+    .additionally {
+        &__content {
+            flex-direction: column-reverse;
+        }
+        &__illustration {
+            margin-bottom: 3vh;
+        }
+        &__list {
+            margin-left: 25%;
+        }
+    }
+}

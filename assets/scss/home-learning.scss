@@ -176,6 +176,9 @@
 }
 @media (max-width: 480px) {
     .learning {
+        & .button {
+            display: none;
+        }
         &__content {
             flex-direction: column;
         }

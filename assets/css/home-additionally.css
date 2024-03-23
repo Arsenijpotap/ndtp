@@ -185,3 +185,18 @@ body.active {
 .additionally__list-title.animate__animated {
   opacity: 1;
 }
+
+@media (max-width: 480px) {
+  .additionally__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .additionally__illustration {
+    margin-bottom: 3vh;
+  }
+  .additionally__list {
+    margin-left: 25%;
+  }
+}

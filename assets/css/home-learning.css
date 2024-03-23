@@ -287,6 +287,9 @@ body.active {
 }
 
 @media (max-width: 480px) {
+  .learning .button {
+    display: none;
+  }
   .learning__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
