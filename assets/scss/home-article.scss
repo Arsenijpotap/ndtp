@@ -64,3 +64,18 @@
 		box-shadow: 0 0 1vw $light;
 	}
 }
+@media (max-width: 480px) {
+	.chapter {
+		flex-direction: column;
+		&__info {
+			padding-top: 33%;
+			order: 2;
+			width: 47vw;
+			margin: 0 auto !important;
+			scale: 1.4;
+		}
+		&__illustration {
+			left: 20%;
+		}
+	}
+}

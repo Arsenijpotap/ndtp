@@ -186,7 +186,8 @@
     }
     .laptop {
         scale: 0.4;
-        margin-left: -17%;
+        position: relative;
+        transform: translate(-187px);
         margin-top: -20%;
     }
 }

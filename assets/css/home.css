@@ -1016,6 +1016,26 @@ body.active {
           box-shadow: 0 0 1vw #ffffff;
 }
 
+@media (max-width: 480px) {
+  .chapter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chapter__info {
+    padding-top: 33%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 47vw;
+    margin: 0 auto !important;
+    scale: 1.4;
+  }
+  .chapter__illustration {
+    left: 20%;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -1632,7 +1652,10 @@ body.active {
   }
   .laptop {
     scale: 0.4;
-    margin-left: -17%;
+    position: relative;
+    -webkit-transform: translate(-187px);
+        -ms-transform: translate(-187px);
+            transform: translate(-187px);
     margin-top: -20%;
   }
 }

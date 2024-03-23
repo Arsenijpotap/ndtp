@@ -299,7 +299,10 @@ body.active {
   }
   .laptop {
     scale: 0.4;
-    margin-left: -17%;
+    position: relative;
+    -webkit-transform: translate(-187px);
+        -ms-transform: translate(-187px);
+            transform: translate(-187px);
     margin-top: -20%;
   }
 }
