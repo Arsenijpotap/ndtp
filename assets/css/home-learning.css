@@ -285,3 +285,21 @@ body.active {
   margin-left: 5vw;
   width: 47vw;
 }
+
+@media (max-width: 480px) {
+  .learning__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .learning__info {
+    margin: 0 auto !important;
+    scale: 1.4;
+  }
+  .laptop {
+    scale: 0.4;
+    margin-left: -17%;
+    margin-top: -20%;
+  }
+}

@@ -174,3 +174,19 @@
         width: 47vw;
     }
 }
+@media (max-width: 480px) {
+    .learning {
+        &__content {
+            flex-direction: column;
+        }
+        &__info {
+            margin: 0 auto !important;
+            scale: 1.4;
+        }
+    }
+    .laptop {
+        scale: 0.4;
+        margin-left: -17%;
+        margin-top: -20%;
+    }
+}
