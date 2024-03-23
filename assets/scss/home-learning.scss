@@ -8,8 +8,14 @@
     width: 584px;
     height: 405px;
 }
-@media (max-width: 480px) {
-}
+
+// @media (max-width: 720px) {
+//     #css-laptop {
+//         padding: 0;
+//         margin-top: -60px;
+//         margin-bottom: 20px;
+//     }
+// }
 
 .laptop * {
     position: absolute;
@@ -188,9 +194,9 @@
         }
     }
     .laptop {
-        scale: 0.4;
-        position: relative;
-        transform: translate(-187px);
-        margin-top: -20%;
+        display: none;
+    }
+    .description {
+        font-size: 8px;
     }
 }

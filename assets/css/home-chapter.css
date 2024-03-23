@@ -130,6 +130,7 @@ body.active {
   display: flex;
 }
 .chapter__illustration {
+  z-index: 10;
   position: relative;
 }
 .chapter__language {

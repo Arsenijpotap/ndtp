@@ -68,14 +68,15 @@
 	.chapter {
 		flex-direction: column;
 		&__info {
-			padding-top: 33%;
+			padding-top: 35%;
 			order: 2;
 			width: 47vw;
 			margin: 0 auto !important;
 			scale: 1.4;
+			padding-bottom: 9%;
 		}
 		&__illustration {
-			left: 20%;
+			left: 19%;
 		}
 	}
 }
