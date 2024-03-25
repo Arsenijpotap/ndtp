@@ -9,7 +9,6 @@ let title = document.getElementsByClassName("title")[0];
 let description = document.getElementsByClassName("description")[0];
 let illustration = document.getElementsByClassName("chapter__illustration")[0];
 strings = document.getElementsByClassName("preview__heading-item");
-console.log(illustration.classList[2]);
 function isInViewport(el) {
 	const rect = el.getBoundingClientRect();
 	return rect.top <= window.innerHeight && rect.left <= window.innerWidth;
@@ -40,13 +39,12 @@ document.addEventListener(
 			}
 		}
 		if (illustration.classList[2]) {
-			console.log(illustration.getAttribute);
 			setTimeout(() => {
 				showSelection();
 			}, 1000);
 		}
 	},
-	{ passive: true }
+	{ passive: true },
 );
 
 function showSelection() {

@@ -51,7 +51,6 @@ function secondStep() {
 	let j = 0;
 	if (document.getElementById("j").style[0]) {
 		rows.forEach((row) => {
-			console.log(1);
 			setTimeout(() => {
 				for (let i = 0; i < row.children.length; i++) {
 					setTimeout(() => {
@@ -130,7 +129,6 @@ function fourthStep() {
 	let j = 0;
 	if (document.getElementById("j").style[0]) {
 		rows.forEach((row) => {
-			console.log(1);
 			setTimeout(() => {
 				for (let i = 0; i < row.children.length; i++) {
 					setTimeout(() => {

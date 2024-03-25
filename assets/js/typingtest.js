@@ -107,7 +107,6 @@ switch (localStorage.getItem("setlanguage")) {
 
 function generateList() {
 	textArray = [];
-	console.log(length);
 	validCommands = Array.from(commands);
 	for (let i = 0; i < length; i++) {
 		textArray.push(validCommands.splice(Math.random() * (validCommands.length - 1), 1).join());
@@ -426,7 +425,6 @@ function resultCounting() {
 	if (topResultsList.length > 3) {
 		topResultsList.pop();
 	}
-	console.log(topResultsList);
 	lastResultsList = JSON.stringify(lastResultsList);
 	localStorage.setItem("lastresultslist", lastResultsList);
 	localStorage.setItem("topresultslist", JSON.stringify(topResultsList));
@@ -634,7 +632,6 @@ function modeTwo() {
 		fillLastTable();
 		table.style.opacity = 1;
 		modalTime.forEach((element) => {
-			console.log(parseFloat(element.textContent));
 			if (parseFloat(element.textContent)) {
 				element.textContent = Math.round((parseFloat(element.textContent) / 6) * 100) / 1000 + " мин.";
 			}
@@ -702,9 +699,7 @@ function fillLastTable() {
 		let countElement = 0;
 		Array.from(row.children).forEach((element) => {
 			elementContent = lastResultsList[countRow];
-			console.log(lastResultsList);
 			if (elementContent) {
-				console.log(Object.values(elementContent)[countElement]);
 				if (Object.values(elementContent)[countElement]) {
 					element.textContent = Object.values(elementContent)[countElement] + " " + metricList[countElement];
 					countElement++;
@@ -718,7 +713,6 @@ function fillLastTable() {
 	countRow = 0;
 	elementContent;
 	topResultsList = JSON.parse(localStorage.getItem("topresultslist"));
-	console.log(topResultsList);
 	tableRowsTop.forEach((row) => {
 		let countElement = 0;
 		Array.from(row.children).forEach((element) => {
@@ -755,7 +749,6 @@ function sortArray(array) {
 
 function setLength() {
 	localStorage.setItem("length", range.value);
-	console.log(range.value);
 	range.value = localStorage.getItem("length");
 	length = +localStorage.getItem("length");
 	rangeLabel.textContent = length;

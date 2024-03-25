@@ -30,9 +30,7 @@ Array.from(icons).forEach((icon) => {
 	icon.addEventListener("click", () => {
 		if (
 			icon.getAttribute("data-name") !=
-			document
-				.getElementsByClassName("choice__slide active")[0]
-				.getAttribute("id")
+			document.getElementsByClassName("choice__slide active")[0].getAttribute("id")
 		) {
 			showSlide(icon.getAttribute("data-name"));
 		}
@@ -60,9 +58,7 @@ function showSlide(name) {
 
 function nextSlide() {
 	if (document.getElementsByClassName("choice__slide active")[0]) {
-		active = document
-			.getElementsByClassName("choice__slide active")[0]
-			.getAttribute("id");
+		active = document.getElementsByClassName("choice__slide active")[0].getAttribute("id");
 	}
 	index = idList.indexOf(active);
 	if (index == idList.length - 1) index = -1;
@@ -71,12 +67,9 @@ function nextSlide() {
 
 function backSlide() {
 	if (document.getElementsByClassName("choice__slide active")[0]) {
-		active = document
-			.getElementsByClassName("choice__slide active")[0]
-			.getAttribute("id");
+		active = document.getElementsByClassName("choice__slide active")[0].getAttribute("id");
 	}
 	index = idList.indexOf(active);
-	console.log(index);
 	if (index == 0) index = idList.length;
 	showSlide(idList[index - 1]);
 }
