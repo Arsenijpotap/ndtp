@@ -241,6 +241,7 @@ body.active {
   display: flex;
 }
 .header__mode-button {
+  width: 30%;
   display: block;
   margin-top: 2vw;
   -webkit-transition: 0.5s;

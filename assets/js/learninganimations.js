@@ -30,7 +30,7 @@ function firstStep() {
 	document.getElementById("f").style.color = "";
 	typingAnimation("firsthint", firstElementText);
 	back = document.getElementById("back");
-	back.outerHTML = '<a class="buttons__button" id="back" href="index.html">Назад</a>';
+	back.outerHTML = '<a class="buttons__button" role="button"  id="back" href="index.html">Назад</a>';
 	isLearningModeOn = true;
 }
 
@@ -116,7 +116,7 @@ function fourthStep() {
 		buttonsRow.style.opacity = 1;
 
 		buttonsRow.innerHTML = `<button class="buttons__button" id="back" onclick="if(!isAnimationWork){surrentStep--;showStep();isAnimationWork = true;};">Назад</button>					
-						<a class="buttons__button" href='index.html' " id="next">На главную</a>
+						<a class="buttons__button" role="button"  href='index.html' " id="next">На главную</a>
 					`;
 	}, 500);
 	// next.style.opacity = 0;

@@ -74,7 +74,7 @@
 			transition:
 				rotate 0s ease,
 				opacity 0.2s;
-			content: url("/assets/icons/training/header/cross.png");
+			content: url("./assets/icons/training/header/cross.png");
 			-webkit-transition:
 				rotate 0s ease,
 				opacity 0.2s;
@@ -133,6 +133,7 @@
 		display: flex;
 	}
 	&__mode-button {
+		width: 30%;
 		display: block;
 		margin-top: 2vw;
 		transition: 0.5s;
