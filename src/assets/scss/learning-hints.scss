@@ -1,0 +1,66 @@
+@import "basic";
+.hints {
+	&__image {
+		display: none;
+	}
+	&__text {
+		width: 70rem;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 1.2rem;
+		transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+	}
+}
+#secondhint {
+	margin: -30rem auto;
+}
+#thirdhint {
+	margin: 53rem auto;
+}
+#fourthhint {
+	margin: -80rem auto;
+}
+#hands-empty-right {
+	opacity: 0.3;
+
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	right: 0;
+	width: 30rem;
+	z-index: 10;
+	position: absolute;
+	top: 100rem;
+	rotate: -10deg;
+}
+#hands-empty-left {
+	opacity: 0.3;
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	left: 0;
+	width: 30rem;
+	z-index: 10;
+	position: absolute;
+	top: 100rem;
+	rotate: 10deg;
+}
+#hands-colorful {
+	right: 25rem;
+	width: 50rem;
+	position: absolute;
+	top: 100rem;
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+}

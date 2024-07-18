@@ -1,0 +1,34 @@
+@import "reset", "fonts", "vars";
+html {
+	// filter: invert(1);
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	font-size: calc(15.4px);
+}
+body {
+	font-family: $main-font !important;
+
+	color: $light;
+
+	background-color: $background;
+	&.active {
+		overflow: hidden;
+	}
+}
+*{
+	font-family: $main-font !important;
+
+
+}
+.conteiner {
+	width: 90vw;
+	margin: 0 auto;
+}
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,28 @@
+.result {
+	position: relative;
+	&::before {
+		z-index: -1;
+		position: absolute;
+		top: 0%;
+		display: block;
+		content: "";
+		width: 100%;
+		height: 110%;
+		background-image: linear-gradient(0deg, #00000000, rgb(20, 17, 1), #00000000);
+	}
+	padding: 10rem 0 10rem 0;
+	&__content {
+		display: flex;
+	}
+
+	&__chart-box {
+		padding-top: 4rem;
+		width: 40rem;
+		height: 30rem;
+		padding-right: 2rem;
+	}
+
+	&__info {
+		width: 50rem;
+	}
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/home.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="conteiner">
+			<div class="header__info">
+				<a href="index.html" class="header__logo">
+					<img src="./assets/icons/logo/logo.png" alt="logo CodeType" class="header__icon">
+					<p class="header__name">CodeType</p>
+				</a>
+				<div class="header__opener">
+					<p class="header__opener-text">Меню</p>
+					<div class="header__burger">
+						<div class="header__bar"></div>
+						<div class="header__bar"></div>
+						<div class="header__bar"></div>
+					</div>
+				</div>
+				<div class="header__menu">
+					<article class="header__content">
+						<h2 hidden>Навигация</h2>
+
+						<nav class="nav">
+							<p class="header__text">Навигация по сайту</p>
+							<ul class="nav__list">
+								<li class="nav__item"><a href="learning.html">Пройти обучение</a></li>
+								<li class="nav__item"><a href="choose.html">Выбор языка</a></li>
+								<li class="nav__item"><button onclick="showWindow()">Тренировка</button></li>
+								<li class="nav__item"><a href="result.php">Результаты</a></li>
+
+							</ul>
+
+							<p class="header__text">Навигация по странице</p>
+
+							<ul class="nav__list">
+								<li class="nav__item"><a href="#learning">Обучение</a></li>
+								<li class="nav__item"><a href="#selection">Выбор языка</a></li>
+								<li class="nav__item"><a href="#result">Результаты</a></li>
+								<li class="nav__item"><a href="#example">Важность</a></li>
+								<li class="nav__item"><a href="#additionally">Другие сферы</a></li>
+							</ul>
+						</nav>
+						<p class="header__text-info">Автор: Потапченко Арсений</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="preview" id="preview">
+			<h2 hidden>Превью</h2>
+
+			<div class="conteiner">
+				<article class="preview__info">
+					<h1 class="preview__heading">
+						<span class="preview__heading-item animation">Тренировка</span><span
+							class="preview__heading-item animation">быстрой</span><span
+							class="preview__heading-item animation">печати</span>
+					</h1>
+					<button class="preview__button">Начать</button>
+					<div class="preview__window">
+						<button aria-label="Закрыть окно" class="preview__cross"></button>
+
+						<p class="preview__window-heading">Выберите язык</p>
+						<div class="preview__cards">
+							<a class="preview__link" href="training.html">
+								<div class="preview__card" id="html-card"
+									onclick="localStorage.setItem('setlanguage', `html`);">
+									<p class="preview__title">HTML</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="js-card"
+									onclick="localStorage.setItem('setlanguage', `js`);">
+									<p class="preview__title">JavaScript</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="css-card"
+									onclick="localStorage.setItem('setlanguage', `css`);">
+									<p class="preview__title">CSS</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="python-card"
+									onclick="localStorage.setItem('setlanguage', `python`);">
+									<p class="preview__title">Python</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="sql-card"
+									onclick="localStorage.setItem('setlanguage', `sql`);">
+									<p class="preview__title">SQL</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="c-card"
+									onclick="localStorage.setItem('setlanguage', `c`);">
+									<p class="preview__title">C</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="ch-card"
+									onclick="localStorage.setItem('setlanguage', `ch`);">
+									<p class="preview__title">C#</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="cpp-card"
+									onclick="localStorage.setItem('setlanguage', `cpp`);">
+									<p class="preview__title">C++</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="java-card"
+									onclick="localStorage.setItem('setlanguage', `java`);">
+									<p class="preview__title">Java</p>
+								</div>
+							</a><a class="preview__link" href="training.html">
+								<div class="preview__card" id="php-card"
+									onclick="localStorage.setItem('setlanguage', `php`);">
+									<p class="preview__title">PHP</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="learning" id="learning">
+			<h2 hidden>Обучение</h2>
+
+			<div class="conteiner">
+
+				<article class="learning__content">
+					<div class="laptop">
+						<div class="lid animate">
+
+						</div>
+						<div class="display animate">
+							<div class="screen">
+							</div>
+							<span class="label">MacBook Pro</span>
+						</div>
+						<div class="keys">
+							<div class="board"></div>
+							<div class="touchpad"></div>
+						</div>
+						<div class="comp">
+							<div class="notch"></div>
+						</div>
+						<div class="compBottom"></div>
+					</div>
+					<div class="learning__info">
+						<h2 class="title animate">Пройдите обучение</h2>
+
+						<p class="description animate">
+							Данный сайт помагает научиться быстро печатать с использованием всех 10 пальцев. Это
+							ценный
+							навык,
+							который поможет
+							справляться с большим объемом кода без лишних усилий.
+							<br><br> Есть курсы на разных языках программирования: HTML, CSS, JavaScript, Python, C, C#,
+							C++
+							и Java.<br><br> Вы получаете подробные результаты и можете сравнивать их между собой либо
+							соревноваться с друзьми из вас быстрее печатает код.<br><br>Пройдя обучение вы сможете
+							начать практиковаться правильной печати. В скором времени ваши результаты заметно улучшатся!
+						</p>
+						<a href="learning.html" role="button" class="button">Пройти обучение</a>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section class="selection" id="selection">
+			<h2 hidden>Выбор языка программирования</h2>
+
+			<div class="conteiner">
+				<article class="chapter">
+					<div class="chapter__info">
+						<h2 class="title animate">Не знаете какой язык вам подходит?</h2>
+						<p class="description animate">
+							Существует множество языков программирования, каждый из которых имеет свои преимущества
+							и недостатки, свою историю и культуру, свои области применения и перспективы развития.
+							Некоторые языки более популярны и востребованы, другие более экзотичны и нишевые.
+							Некоторые языки более просты и удобны для начинающих, другие более сложны и мощны для
+							профессионалов. Некоторые языки более подходят для веб-разработки, другие для научных
+							вычислений, игр, мобильных приложений, искусственного интеллекта и т.д. Мы поможем
+							выбрать вам подходящий язык, предоставив краткую информацию о каждом из них.
+						</p>
+						<a href="choose.html" onclick="localStorage.setItem('setlanguage', `html`);" class="button"
+							role="button">Выбрать
+							язык</a>
+					</div>
+					<div class="chapter__illustration animate">
+						<a role="button" aria-label="перейти на страницу выбора языка"
+							onclick="localStorage.setItem('setlanguage', 'c');" href="choose.html"
+							class="chapter__language" id="c"><img src="./assets/img/home/main/selection/c.png" alt
+								class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="php"
+							onclick="localStorage.setItem('setlanguage', `php`);"><img
+								src="./assets/img/home/main/selection/php.png" alt class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="cpp"
+							onclick="localStorage.setItem('setlanguage', `cpp`);"><img
+								src="./assets/img/home/main/selection/cpp.png" alt class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="html"
+							onclick="localStorage.setItem('setlanguage', `html`);"><img
+								src="./assets/img/home/main/selection/html.png" alt class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="python"
+							onclick="localStorage.setItem('setlanguage', `python`);"><img
+								src="./assets/img/home/main/selection/python.png" alt class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="sql"
+							onclick="localStorage.setItem('setlanguage', `sql`);"><img
+								src="./assets/img/home/main/selection/sql.png" alt class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="java"
+							onclick="localStorage.setItem('setlanguage', `java`);"><img
+								src="./assets/img/home/main/selection/java.png" alt class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="js" onclick="localStorage.setItem('setlanguage', `js`);"><img
+								src="./assets/img/home/main/selection/js.png" alt class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="css"
+							onclick="localStorage.setItem('setlanguage', `css`);"><img
+								src="./assets/img/home/main/selection/css.png" alt class="chapter__image"></a>
+						<a role="button" aria-label="перейти на страницу выбора языка" href="choose.html"
+							class="chapter__language" id="ch" onclick="localStorage.setItem('setlanguage', `ch`);"><img
+								src="./assets/img/home/main/selection/ch.png" alt class="chapter__image"></a>
+						<div role="button" role="button" class="chapter__timeline">
+							<p class="chapter__timeline-item"></p>
+							<p class="chapter__timeline-item">1972</p>
+							<p class="chapter__timeline-item">1974</p>
+							<p class="chapter__timeline-item">1983</p>
+							<p class="chapter__timeline-item">1986</p>
+							<p class="chapter__timeline-item">1991</p>
+							<p class="chapter__timeline-item">1994</p>
+							<p class="chapter__timeline-item">1995</p>
+							<p class="chapter__timeline-item">1996</p>
+							<p class="chapter__timeline-item">2000</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section class="result" id="result">
+			<h2 hidden>Результаты</h2>
+
+			<div class="conteiner">
+				<article class="result__content">
+					<div class="result__chart-box">
+						<canvas id="exampleChart"></canvas>
+					</div>
+					<div class="result__info">
+						<h2 class="title animate">Результаты</h2>
+						<p class="description animate">
+							На этой странице представлены личные результаты пользователя, топ результатов и
+							пользователей. Также здесь вы можете <a href="./login.php" id="register">создать аккаунт</a>
+							или<a href="./login.php" id="login"> войти</a>
+							в него, для
+							получения
+							большего количества результатов. При помощи визуализированных данных вы можете
+							сориентироваться куда приложить усилия для достижения наилучших результатов, а также видеть
+							свой прогресс. При помощи
+							фильтров результатов вы можете рассматривать только те категории, которые вам необходимы.
+							<br>
+
+							Также вы можете посоревноваться с другими пользователями за места в топах, который
+							представлен в виде удобных таблиц с фильтрами.
+
+						</p>
+						<a href="result.php" class="button" role="button">К результатам</a>
+					</div>
+
+				</article>
+			</div>
+		</section>
+
+		<section class="additionally" id="additionally">
+			<h2 hidden>Другие сферы деятельности</h2>
+
+			<div class="conteiner">
+				<article class="additionally__content">
+					<div class="additionally__info">
+						<h2 class="title animate">Быстрая печать важна для
+							других сфер<br>деятельности</h2>
+
+						<ul class="additionally__list">
+							<li class="additionally__list-item">
+								<p class="additionally__list-title animate">Писатели и редакторы</p>
+								<p class="description animate">Быстрая печать может ускорить процесс написания и
+									редактирования текстов.</p>
+							</li>
+							<li class="additionally__list-item">
+								<p class="additionally__list-title animate">Секретари и администраторы</p>
+								<p class="description animate">Они часто должны быстро вводить данные и отвечать на
+									электронные письма.</p>
+							</li>
+							<li class="additionally__list-item">
+								<p class="additionally__list-title animate">Ученые и исследователи</p>
+								<p class="description animate">Для них быстрая печать может помочь в записи наблюдений,
+									анализе данных и написании научных статей</p>
+							</li>
+							<li class="additionally__list-item">
+								<p class="additionally__list-title animate">Студенты</p>
+								<p class="description animate">Быстрая печать может помочь в написании эссе, отчетов и
+									заметок во время лекций</p>
+							</li>
+							<li class="additionally__list-item">
+								<p class="additionally__list-title animate">Журналисты</p>
+								<p class="description animate">Для них быстрая печать может помочь в быстром создании
+									статей и отчетов</p>
+							</li>
+
+							<li class="additionally__list-item">
+								<p class="additionally__list-title animate">Менеджеры и руководители</p>
+								<p class="description animate">Быстрая печать может помочь в управлении проектами,
+									планировании и общении с командой</p>
+							</li>
+
+						</ul>
+					</div>
+					<img alt="иллюстрация компьютер" class="additionally__illustration animate"
+						src="./assets/img/home/main/additionally/areas-of-work.png">
+				</article>
+			</div>
+		</section>
+		<section class="example" id="example">
+			<h2 hidden>Примеры</h2>
+
+			<div class="conteiner">
+				<article class="example__content">
+					<img class="example__illustration animate" src="./assets/img/home/main/example/illustration.png"
+						alt="">
+					<div class="example__info">
+						<h2 class="title animate">Быстрая печать важна по нескольким причинам:</h2>
+
+						<ul class="example__list">
+							<li class="example__list-item">
+								<p class="example__list-title animate">Эффективность</p>
+								<p class="description animate">Быстрая печать позволяет обрабатывать больше заданий за
+									меньшее время, что увеличивает производительность.</p>
+							</li>
+							<li class="example__list-item">
+								<p class="example__list-title animate">Снижение затрат</p>
+								<p class="description animate">Быстрая печать может снизить затраты на печать, особенно
+									при больших объемах.</p>
+							</li>
+							<li class="example__list-item">
+								<p class="example__list-title animate">Оптимизация рабочего процесса</p>
+								<p class="description animate">Использование родного языка принтера и стандартных форм
+									печати может ускорить процесс печати.</p>
+							</li>
+							<li class="example__list-item">
+								<p class="example__list-title animate">Улучшение обслуживания клиентов</p>
+								<p class="description animate">Быстрая печать может помочь улучшить обслуживание
+									клиентов, особенно в отраслях, где требуется быстрая печать
+									документов, таких как розничная торговля или гостиничный бизнес.</p>
+							</li>
+							<li class="example__list-item">
+								<p class="example__list-title animate">Сохранение времени</p>
+								<p class="description animate">Быстрая печать может сэкономить время, особенно при
+									печати больших документов или при выполнении большого количества
+									заданий печати.</p>
+							</li>
+							<li class="example__list-item">
+								<p class="example__list-title animate">Увеличение конкурентоспособности</p>
+								<p class="description animate">В некоторых отраслях быстрая печать может дать
+									преимущество перед конкурентами, особенно если скорость печати влияет на
+									скорость обслуживания клиентов или производительность.</p>
+							</li>
+
+						</ul>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+
+
+	<!-- <script src="assets/js/test.js"></script> -->
+	<!-- <script src="assets/js/.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./assets/js/menu.js"></script>
+	<script src="./assets/js/window.js"></script>
+	<script src="./assets/js/scrolling.js"></script>
+	<script src="./assets/js/home.js"></script>
+</body>
+
+</html>

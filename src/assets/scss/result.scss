@@ -1,0 +1,13 @@
+@import "result-all";
+@import "result-info";
+@import "result-more-info";
+@import "result-my-result";
+@import "result-top-result";
+.result {
+	transition: 0.5s;
+	position: absolute;
+}
+html,
+body {
+	overflow: hidden;
+}

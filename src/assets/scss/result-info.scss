@@ -1,0 +1,72 @@
+@import "basic";
+
+.main {
+}
+#logout {
+	&:hover {
+		color: red;
+	}
+}
+
+.result {
+	&__logo {
+		width: 4rem;
+		margin-right: 2rem;
+	}
+	&__interaction {
+		padding-top: 1rem;
+		& button,
+		p,
+		a {
+			margin-top: 1rem;
+		}
+	}
+
+	&__interaction-button {
+		z-index: 9999;
+		color: $light;
+		display: inline;
+		transition: 0.4s;
+		opacity: 0.5;
+		font-size: 1.1rem;
+		float: right;
+		margin-right: 1rem;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__name {
+		z-index: 9999;
+		color: $light;
+		display: inline;
+		transition: 0.4s;
+		font-size: 1.1rem;
+		float: right;
+		margin-right: 1rem;
+	}
+
+	&__info {
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+	}
+
+	&__mode-button {
+		opacity: 0.5;
+		transition: 0.4s;
+		font-size: 1.3rem;
+		-webkit-transition: 0.4s;
+		-moz-transition: 0.4s;
+		-ms-transition: 0.4s;
+		-o-transition: 0.4s;
+		margin-right: 1rem;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
